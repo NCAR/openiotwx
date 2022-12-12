@@ -1,0 +1,45 @@
+site_name: openIoTwx
+theme:
+  name: material
+  custom_dir: material
+  font:
+    text: Roboto
+
+nav:
+  - Home:
+    - Welcome: "index.md"
+  - openIoTwx Introduction:
+    - Platform: "introduction/platform.md"
+    - Community: "introduction/community.md"
+    - Ideals: "introduction/ideals.md"
+  - Getting Started:
+    - Materials list: "getting-started/materials.md"
+    - Computing needs: "getting-started/computing.md"
+    - Software tools: "getting-started/software.md"
+  - Print:
+    - Preliminaries: "print/index.md"
+    - Base:  "print/base.md"
+    - Atmos Node: "print/atmos.md"
+  - Assemble:
+    - Preliminaries: "assemble/index.md"
+    - Base: "assemble/base.md"
+    - Atmos Classic: "assemble/atmos.md"
+    - Atmos G2 "Pineapple": "assemble/atmos-pineapple.md"
+    - Atmos G2 "Mushroom": "assemble/atmos-pineapple.md"
+  - Install:
+    - Preliminaries: "installation/index.md"
+    - Atmos: 
+      - Preliminaries: "installation/atmos/preliminaries.md"
+      - Arduino Code: "installation/atmos/code.md"
+      - Configuring: "installation/atmos/configuration.md"
+      - Testing: "installation/atmos/testing.md"
+  - Deploy: 
+    - Atmos: "deploying/atmos/index.md"
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 

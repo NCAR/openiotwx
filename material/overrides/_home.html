@@ -1,0 +1,532 @@
+{% extends "overrides/main-styles.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+{{ super() }}
+
+<!-- Hero for landing page -->
+<!-- 1st Section -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+
+            <!-- Hero image -->
+            <div class="tx-hero__image">
+                <img
+                        src="assets/images/illustrations/home.png"
+                        alt=""
+                        width="600"
+                        draggable="false"
+                >
+            </div>
+
+            <!-- Hero content -->
+            <div class="tx-hero__content">
+                <h1  id="leverage-architecture">openIoTwx Documentation</h1>
+                <p>Adipisicing exercitation occaecat veniam culpa ex.
+                </p>
+                <a
+                        href="{{ page.next_page.url | url }}"
+                        title="{{ page.next_page.title | e }}"
+                        class="md-button md-button--primary"
+                >
+                    Get started     
+                </a><br>
+
+                <a
+                    href="https://github.com/iotwx"
+                    title="{{ lang.t('source.link.title') }}"
+                    class="md-button">
+                    Contribute on GitHub
+                    <img
+                        class = icon
+                        src="assets/images/icons/github-white.svg"
+                        alt=""
+                        width="24"
+                        draggable="false"
+                    >
+                </a><br>
+
+                <a
+                    href=""
+                    title="{{ page.next_page.title | e }}"
+                    class="md-button md-button--primary">
+                    Join us on openIoTwx Slacklklkm
+                    <img
+                            class = icon
+                            src="assets/images/logos/slack.png"
+                            alt=""
+                            width="22"
+                            draggable="false"
+                    >
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tx-container">
+    <div class="md-content md-grid" data-md-component="content">
+        <div class="md-content__inner">
+            <header class="md-typeset">
+                <h1 id="everything-you-would-expect"> Everything you would expect <a href="#everything-you-would-expect"
+                        class="headerlink" title="Permanent link"> ¶ </a> </h1>
+            </header>
+            <div class="mdx-expect">
+Mollit officia non ea do in eiusmod id.                <ul class="mdx-expect__list">
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38h1.92M19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28L19.69 12Z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>It's just Markdown</h2>
+                            <p> Focus on the content of your documentation and create a professional static site in
+                                minutes. No need to know HTML, CSS or JavaScript – let Material for MkDocs do the heavy
+                                lifting for you. </p>
+                        </div>
+                    </li>
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M3 6h18V4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v-2H3V6m10 6H9v1.78c-.61.55-1 1.33-1 2.22 0 .89.39 1.67 1 2.22V20h4v-1.78c.61-.55 1-1.34 1-2.22s-.39-1.67-1-2.22V12m-2 5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5M22 8h-6c-.5 0-1 .5-1 1v10c0 .5.5 1 1 1h6c.5 0 1-.5 1-1V9c0-.5-.5-1-1-1m-1 10h-4v-8h4v8Z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>Works on all devices</h2>
+                            <p> Serve your documentation with confidence – Material for MkDocs automatically adapts to
+                                perfectly fit the available screen estate, no matter the type or size of the viewing
+                                device. Desktop. Tablet. Mobile. All great. </p>
+                        </div>
+                    </li>
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M17 8h3v12h1v1h-4v-1h1v-3h-4l-1.5 3H14v1h-4v-1h1l6-12m1 1-3.5 7H18V9M5 3h5c1.11 0 2 .89 2 2v11H9v-5H6v5H3V5c0-1.11.89-2 2-2m1 2v4h3V5H6Z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>Made to measure</h2>
+                            <p> Make it yours – change the colors, fonts, language, icons, logo, and more with a few
+                                lines of configuration. Material for MkDocs can be easily extended and provides many
+                                options to alter appearance and behavior. </p>
+                        </div>
+                    </li>
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M4 10a1 1 0 0 1-1-1 1 1 0 0 1 1-1h8a2 2 0 0 0 2-2 2 2 0 0 0-2-2c-.55 0-1.05.22-1.41.59a.973.973 0 0 1-1.42 0c-.39-.39-.39-1.03 0-1.42C9.9 2.45 10.9 2 12 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4H4m15 2a1 1 0 0 0 1-1 1 1 0 0 0-1-1c-.28 0-.53.11-.71.29a.996.996 0 0 1-1.41 0c-.38-.39-.38-1.02 0-1.41C17.42 8.34 18.17 8 19 8a3 3 0 0 1 3 3 3 3 0 0 1-3 3H5a1 1 0 0 1-1-1 1 1 0 0 1 1-1h14m-1 6H4a1 1 0 0 1-1-1 1 1 0 0 1 1-1h14a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-.83 0-1.58-.34-2.12-.88-.38-.39-.38-1.02 0-1.41a.996.996 0 0 1 1.41 0c.18.18.43.29.71.29a1 1 0 0 0 1-1 1 1 0 0 0-1-1Z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>Fast and lightweight</h2>
+                            <p> Don't let your users wait – get incredible value with a small footprint by using one of
+                                the fastest themes available with excellent performance, yielding optimal search engine
+                                rankings and happy users that return. </p>
+                        </div>
+                    </li>
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="m18.4 11.2-4.1.2 2.3-2.6c.2-.3.3-.8.2-1.3-.1-.3-.2-.6-.5-.8l-5.4-3.2c-.4-.3-1-.2-1.4.1L6.8 6.1c-.5.5-.6 1.2-.1 1.7.4.5 1.2.5 1.7.1l2-1.8 1.9 1.1-4.2 4.3c-.1.1-.1.2-.2.2-.5.2-1 .4-1.4.7L8 13.9c.5-.2 1-.4 1.5-.4 1.9 0 3.5 1.6 3.5 3.5 0 .6-.1 1.1-.4 1.5l1.5 1.5c.6-.9.9-1.9.9-3 0-1.2-.4-2.4-1.1-3.3l3.3-.3-.2 4.8c-.1.7.4 1.2 1.1 1.3h.1c.6 0 1.1-.5 1.2-1.1l.2-5.9c0-.3-.1-.7-.3-.9-.3-.3-.6-.4-.9-.4M18 5.5a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m-5.5 16.1c-.9.6-1.9.9-3 .9C6.5 22.5 4 20 4 17c0-1.1.3-2.1.9-3l1.5 1.5c-.2.5-.4 1-.4 1.5 0 1.9 1.6 3.5 3.5 3.5.6 0 1.1-.1 1.5-.4l1.5 1.5Z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>Built for everyone</h2>
+                            <p> Make accessibility a priority – users can navigate your documentation with touch
+                                devices, keyboards, and screen readers. Semantic markup ensures that your documentation
+                                works for everyone. </p>
+                        </div>
+                    </li>
+                    <li class="mdx-expect__item md-typeset">
+                        <div class="mdx-expect__icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75 11c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5C9 11.56 8.44 11 7.75 11zm1.27 4.5a.469.469 0 01.48-.5h5a.47.47 0 01.48.5c-.116 1.316-.759 2.5-2.98 2.5s-2.864-1.184-2.98-2.5zm7.23-4.5c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5c0-.69-.56-1.25-1.25-1.25z">
+                                </path>
+                                <path fill-rule="evenodd"
+                                    d="M21.255 3.82a1.725 1.725 0 00-2.141-1.195c-.557.16-1.406.44-2.264.866-.78.386-1.647.93-2.293 1.677A18.442 18.442 0 0012 5c-.93 0-1.784.059-2.569.17-.645-.74-1.505-1.28-2.28-1.664a13.876 13.876 0 00-2.265-.866 1.725 1.725 0 00-2.141 1.196 23.645 23.645 0 00-.69 3.292c-.125.97-.191 2.07-.066 3.112C1.254 11.882 1 13.734 1 15.527 1 19.915 3.13 23 12 23c8.87 0 11-3.053 11-7.473 0-1.794-.255-3.647-.99-5.29.127-1.046.06-2.15-.066-3.125a23.652 23.652 0 00-.689-3.292zM20.5 14c.5 3.5-1.5 6.5-8.5 6.5s-9-3-8.5-6.5c.583-4 3-6 8.5-6s7.928 2 8.5 6z">
+                                </path>
+                            </svg> </div>
+                        <div class="mdx-expect__description">
+                            <h2>Open Source</h2>
+                            <p> Trust 20,000+ users – choose a mature and actively maintained solution built with
+                                state-of-the-art Open Source technologies. Keep ownership of your content without fear
+                                of vendor lock-in. Licensed under MIT. </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- 2nd Section -->
+<!-- WHAT IS LEVERAGE? -->
+<section class="tx-container-2">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero__image-2" style="margin-top: 50px">
+            <img
+                    src="assets/images/about_img.jpg"
+                    alt=""
+                    draggable="false"
+                    align="left"
+            >
+        </div>
+        <div class="tx-hero">
+            <!-- Hero content -->
+            <div class="tx-hero__content-1">
+                <h1 id="what-is-leverage">What is openIoTwx?</h1><br>
+
+                <p>
+                <!-- <a
+                        href="#"
+                        title="{{ page.next_page.title | e }}"
+                        class="md-button md-button"
+                >
+                    Features
+                </a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3rd Section -->
+<!-- WHY LEVERAGE? -->
+<section class="tx-container-3">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <!-- Hero image -->
+            <div class="tx-hero__image-3">
+                <img
+                        src="assets/images/1361701788.png"
+                        alt=""
+                        width="100"
+                        draggable="false"
+                >
+            </div>
+
+            <!-- Hero content -->
+            <div class="tx-hero__content_small">
+                <div style="padding: 10%;">
+                    <h1 id="why-iotwx">Why openIoTwx?</h1><br>
+                    <p>
+                        Laborum sit enim mollit consectetur officia non commodo
+                        adipisicing laboris eiusmod exercitation consectetur
+                        excepteur do. Nisi exercitation sunt officia ipsum elit
+                        irure dolore et consequat nostrud sit ipsum quis do laborum.
+                        Exercitation sint ut in sunt Lorem voluptate nisi ea amet
+                        elit reprehenderit occaecat incididunt ipsum minim. Enim
+                        culpa veniam et occaecat sint aliquip laborum elit. Id duis
+                        consectetur duis consectetur voluptate occaecat commodo ut
+                        officia et id ex velit. Cillum occaecat consectetur occaecat
+                        consectetur labore incididunt non. In ad tempor officia
+                        dolore cillum id irure officia Lorem. Anim cillum Lorem ex
+                        duis ad proident qui et cillum laborum Lorem in quis. Non
+                        eiusmod velit excepteur et aute esse cillum et deserunt
+                        exercitation culpa officia magna Lorem culpa. Incididunt
+                        incididunt velit cupidatat in cillum voluptate magna ad
+                        Lorem. Duis consectetur ea eu exercitation id do. Officia
+                        dolore dolor ad incididunt consectetur. Magna sunt do
+                        consectetur elit culpa culpa aute. Et aliqua voluptate ad
+                        quis sint amet veniam et laborum ut. Labore sint id
+                        voluptate. In nostrud et officia enim.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CERTS & APN -->
+<!--<section class="tx-container-3">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+
+            &lt;!&ndash; Hero image &ndash;&gt;
+            <div class="tx-hero__image-4">
+                <img
+                        src="assets/images/illustrations/home-section-7.png"
+                        alt=""
+                        width="800"
+                        draggable="false"
+                >
+            </div>
+        </div>
+    </div>
+</section>-->
+
+<!-- 4th Section -->
+<!-- TECH STACK  -->
+<section class="tx-container-2">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero__image-2">
+            <img
+                    src="assets/images/illustrations/home-section-5.png"
+                    alt=""
+                    width="800"
+                    draggable="false"
+                    align="left"
+            >
+        </div>
+        <div class="tx-hero">
+            <!-- Hero content -->
+            <div class="tx-hero__content-2">
+                <h1 id="tech-stack">The openIoTwx architecture</h1>
+                <p>
+                    Amet ad non sint proident id esse commodo laborum minim id.
+                    Eu nulla ut veniam ad adipisicing ad ut ad officia consequat
+                    excepteur. Qui minim nisi est dolor velit. Consequat esse
+                    elit sit cillum non dolor elit adipisicing elit et. Velit
+                    deserunt do mollit anim eu elit sunt reprehenderit veniam
+                    eiusmod non Lorem. Culpa excepteur incididunt do
+                    reprehenderit irure reprehenderit voluptate aliqua aute qui
+                    ut. Lorem tempor dolore et cupidatat nostrud ipsum tempor
+                    cupidatat ad velit nostrud labore amet. Lorem sint quis
+                    cupidatat magna amet nulla minim ipsum. Ullamco culpa aute
+                    exercitation id nulla reprehenderit laboris eu cillum minim
+                    incididunt aliquip dolore. Aliquip nisi id sunt deserunt
+                    voluptate ipsum elit. Dolore anim laboris aliquip.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5th Section  -->
+<!-- WORK WITH US -->
+<section class="tx-container-4">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+
+            <!-- Hero image -->
+            <div class="tx-hero__image-3">
+                <img
+                        src="assets/images/1361701788.png"
+                        alt=""
+                        width="100"
+                        draggable="false"
+                >
+            </div>
+
+            <!-- Hero content -->
+            <div class="tx-hero__content_small">
+                <div style="padding: 10%;">
+                    <h1 id="collaborate">Collaborate with us</h1>
+                    <p>
+                        Dolor aliqua pariatur aliquip in reprehenderit quis
+                        ipsum eu velit ex. Id dolore sit officia anim Lorem
+                        consectetur eiusmod mollit excepteur officia occaecat
+                        voluptate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  6th Section  -->
+<!--  TESTIMONIALS -->
+<!--<section class="tx-container-testimonial">
+
+    <div>
+        &lt;!&ndash; Titulo &ndash;&gt;
+        <h1 class=testimonial-header id="testimonials" style="text-align: center">
+            Trusted by our customers
+        </h1>
+    </div>
+
+    <div class="container-testimonial">
+        <div class="testimonial-card">
+            <div class="text">
+                "We utilized Binbash to help get our DevOps infrastructure launched and manage all aspects of our AWS-based setup.
+                Their security and compliance focus turned out to be a great fit for our HIPAA regulation needs.<br>
+                We’ve been very pleased with their responsiveness and thoroughness with regards to our technology needs
+                and would be happy to work with them again in the future."
+            </div>
+
+            <div class="footer">
+                <div class="image" style=" background:no-repeat center/cover url(assets/images/testimonials/yury.yakubchyk.circle.png);">
+                </div>
+                <h3 class='person'>
+                    <a href="https://www.linkedin.com/in/yuryyak/">Yury Yakubchyk</a>
+                    </h3>
+
+                <h5 class='person-title' style="text-align:center;">Founder & CEO<br>
+                    <a href="https://www.joinsprouttherapy.com/" style="color: aquamarine">joinsprouttherapy.com</a><br>
+                    <a href="https://www.lifehousehotels.com/" style="color: aquamarine">lifehousehotels.com</a><br>
+                    (Multiple US Industries)
+                </h5>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="text">
+                "I've worked with Binbash for almost 3 years and my experience was absolutely positive.<br>
+                I found them to be very knowledgeable and reliable as well as open minded and willing to try new
+                technologies (but always considering trade-offs).<br>
+                Communication is excellent (even if things go wrong).<br>
+                Great Team of professionals!"
+            </div>
+
+            <div class="footer">
+                <div class="image" style="background:no-repeat center/cover url(assets/images/testimonials/max.ivanov.circle.png);">
+                </div>
+                <h3 class='person'> <a href="https://www.toptal.com/resume/max-ivanov">Max Ivanov</a>
+                </h3>
+                <h5 class='person-title' style="text-align:center;"> Software Architect <br> (Media Streaming Industry)</h5>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="text">
+                "Binbash has a focused and highly productive professional team.<br>
+                They have exceptional tech skills and effectively transmit and implement their solutions, such as Leverage.
+                Thanks to their collaboration we managed to have a superlative product hosted in AWS.
+                It is undoubtedly a company with which I would like to work in any challenge that lies ahead"
+            </div>
+
+            <div class="footer">
+                <div class="image" style="background:no-repeat center/cover url(assets/images/testimonials/martin.vago.circle.png);">
+                </div>
+                <h3 class='person'> <a href="https://www.linkedin.com/in/mvago/">Martín Vago</a>
+                </h3>
+                <h5 class='person-title' style="text-align:center;">IT & CloudOps Manager <br>
+                    <a href="https://www.tunubi.com" style="color: aquamarine">tunubi.com</a><br>
+                    (Fintech Industry)
+                </h5>
+            </div>
+        </div>
+
+    </div><br>
+
+    <div class="tx-hero">
+        &lt;!&ndash; Hero content &ndash;&gt;
+        <div class="tx-hero__content-2" style="float: left">
+            <a
+                    href="../../work-with-us/testimonials/"
+                    title="{{ page.next_page.title | e }}"
+                    class="md-button md-typeset"
+                    style="
+                        font-family: Roboto;
+                        font-weight: 700;
+                        background: #172A45;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        padding-right: 2rem;
+                        padding-left: 2rem;
+                        border: 0.1rem solid;
+                        border-radius: .1rem;
+                          "
+            >
+                More testimonials
+            </a>
+        </div>
+    </div><br>
+
+</section>-->
+
+<!--     7th Section    -->
+<!-- SUBSCRIPTION PLANS -->
+<!--<section>
+    &lt;!&ndash; Contenedor &ndash;&gt;
+    <div class="pricing-wrapper clearfix">
+        &lt;!&ndash; Titulo &ndash;&gt;
+        <h1 class="pricing-table-title" id="leverage-subscription" style="text-align: left">
+            Subscription Plans
+        </h1>
+
+        <div class="pricing-table">
+            <h3 class="pricing-title">Community (Free)</h3>
+            <div class="price">$0<sup>/ month</sup></div>
+            &lt;!&ndash; Contratar / Contact Us &ndash;&gt;
+            <div class="table-buy">
+                <p><sup> Open Source ❤️</sup></p>
+                <a href="https://github.com/binbashar"
+                   class="pricing-action">Free</a>
+            </div>
+        </div>
+
+        <div class="pricing-table">
+            <h3 class="pricing-title">Basic</h3>
+            <div class="price">$3400<sup>/ month</sup></div>
+            &lt;!&ndash; Contratar / Contact Us &ndash;&gt;
+            <div class="table-buy">
+                <p>$3400<sup>/ month (40hs)</sup></p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScgYmguLk5lDgrDa7HEt8hZFsRKncCf0XMezbDRsXt4mixg4Q/viewform?usp=sf_link"
+                   class="pricing-action">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="pricing-table recommended">
+            <h3 class="pricing-title">Premium</h3>
+            <div class="price">$6400<sup>/ month</sup></div>
+            &lt;!&ndash; Contratar / Contact Us &ndash;&gt;
+            <div class="table-buy">
+                <p>$6400<sup>/ month (80hs)</sup></p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScgYmguLk5lDgrDa7HEt8hZFsRKncCf0XMezbDRsXt4mixg4Q/viewform?usp=sf_link"
+                   class="pricing-action">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="pricing-table">
+            <h3 class="pricing-title">Business</h3>
+            <div class="price">$90<sup>/ hour</sup></div>
+            &lt;!&ndash; Contratar / Contact Us &ndash;&gt;
+            <div class="table-buy">
+                <p>$10800<sup>/ month (120hs)</sup></p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScgYmguLk5lDgrDa7HEt8hZFsRKncCf0XMezbDRsXt4mixg4Q/viewform?usp=sf_link"
+                   class="pricing-action">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tx-hero">
+        &lt;!&ndash; Hero content &ndash;&gt;
+        <div class="tx-hero__content-2" style="float: left">
+            <a
+                    href="../../work-with-us/subscription-plans"
+                    title="{{ page.next_page.title | e }}"
+                    class="md-button md-typeset"
+                    style="
+                        font-family: Roboto;
+                        font-weight: 700;
+                        background: #172A45;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        padding-right: 2rem;
+                        padding-left: 2rem;
+                        border: 0.1rem solid;
+                        border-radius: .1rem;
+                          "
+            >
+                Subscription Plans Details
+            </a>
+        </div>
+    </div>
+
+</section>-->
+
+<!-- Footer Section -->
+<section class="tx-footer">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <!-- Hero content -->
+            <div class="tx-hero__content-footer">
+                <p style="text-align:center;">
+                    © 2023
+
+                    || Contact us
+                    <strong>
+                        <a href="mailto:info@iotwx.net">info@iotwx.net</a>
+                    </strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

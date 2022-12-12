@@ -1,0 +1,725 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css);
+
+    .md-main {
+        flex-grow: 0
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    .tx-container {
+        padding-top: .0rem;
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg,47%,55%,1) 99%,#fff 99%)
+    }
+
+    .tx-hero {
+        margin: 32px 2.8rem;
+        color: var(--md-primary-bg-color);
+        justify-content: center;
+    }
+
+    .tx-hero h1 {
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .tx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .tx-hero__image{
+        width:17rem;
+        height:17rem;
+        order:1;
+        padding-right: 2.5rem;
+    }
+
+    .tx-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button--primary {
+        background-color: var(--md-primary-bg-color);
+        color: hsla(280deg, 37%, 48%, 1);
+        border-color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button:focus,
+    .tx-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .feature-item h2 svg {
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+        transform: translateY(10%);
+    }
+
+    .top-hr {
+        margin-top: 42px;
+    }
+
+    .feature-item {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 15px;
+        word-break: break-word
+    }
+
+    .feature-item h2 {
+        color: #333;
+        font-weight: 300;
+        font-size: 32px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: inherit;
+        font-weight: 600;
+    }
+
+    .block-item {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 15px;
+        word-break: break-word
+    }
+
+    .block-item p {
+        font-size: 23px;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        color: #111;
+        margin: 0 0 10px;
+        display: block;
+    }
+
+    .block-item h2 {
+        color: #333;
+        font-weight: 300;
+        font-size: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: inherit;
+        font-weight: 600;
+    }
+
+    .feature-item p {
+        font-size: 23px;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        color: #111;
+        margin: 0 0 10px;
+        display: block;
+    }
+
+
+    .blublock {
+     background: #0192c8;
+    }
+
+    .blu {
+        color: #0192c8;
+    }
+
+    .blublock h2 {
+        color:rgb(255, 255, 255);
+    }
+
+    .blublock p {
+        color:rgb(255, 255, 255);
+
+    }
+
+
+    @media screen and (max-width:30em) {
+        .tx-hero h1 {
+            font-size: 1.4rem
+        }
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tx-hero__content {
+            max-width: 22rem;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 4.0rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width:76.25em) {
+        .md-sidebar--primary {
+            display: none
+        }
+
+        .top-hr {
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .bottom-hr {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .feature-item:hover {
+            /* background-color: #526cfe47;
+            border-radius: 3px; */
+        }
+    }
+
+    .hr {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .text-center {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+    .centered-element {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    .logos img {
+        flex: 1 1 auto;
+        padding: 25px;
+        max-height: 130px;
+        vertical-align: middle;
+    }
+
+    .hr-logos {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .md-footer-meta__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1.0rem;
+    }
+
+    .md-footer-social {
+        padding-top: 20px;
+    }
+
+
+    #weather_wrapper{
+        width: 400px;
+        margin: 100px auto;
+    }
+    .weatherCard{
+        width: 400px;
+        height: 200px;
+        font-family: 'Open Sans';
+        position: relative;
+        line-height: 1.4;
+    }
+    .currentTemp{
+        width: 220px;
+        height: 200px;
+        background: rgb(41, 41, 41);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .currentWeather{
+        width: 180px;
+        height: 200px;
+        background: rgb(237, 237, 237);
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .temp{
+        font-size: 60px;
+        text-align: center;
+        display: block;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        padding: 10px 0 0;
+    }
+    .location{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 30px;
+        padding-top: 20px;
+        display: block;
+    }
+    .temphot{
+        color: rgb(245, 33, 33); 
+        font-size: 20pt; 
+        font-family: weathericons;
+        text-align: center;
+    }
+    .tempcool{
+        color: rgb(17, 81, 255); 
+        font-size: 20pt; 
+        font-family: weathericons;
+        text-align: center;
+    }
+    .tempnormal{ 
+        color: rgb(18, 252, 57); 
+        font-size: 20pt; 
+        font-family: weathericons;
+        text-align: center;
+    }
+    .date{
+        padding: 0px;
+        text-align:center;
+        font-size:10pt;
+    }
+    .time{
+        padding: 0px;
+        text-align: center;
+        font-weight: 700;
+        font-size:14pt;
+    }
+    .rad{
+        padding: 0px;
+        text-align: center;
+        font-weight: 700;
+        font-size:10pt;
+        background: #fff349;
+        width: 180px;
+    }
+    .ntr{
+        padding: 0px;
+        text-align: center;
+        font-weight: 700;
+        font-size:10pt;
+        color:rgb(255, 255, 255);
+        width: 100%;
+    }
+    .conditions{
+        font-family: weathericons;
+        font-size: 60px;
+        display: block;
+        padding: 0px 0 0;
+        text-align: center;
+    }
+    .info{
+        width: 180px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: rgb(42, 178, 234);
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .rain {
+        width: 50%;
+        position: absolute;
+        left: 10px;
+        word-spacing: 60px;
+        top: 3px;
+    }
+    .rain::before{
+        display: block;
+        content: '\f07a';
+        font-family: weathericons;
+        font-size: 30px;
+        left: -5px;
+        top: 0px;
+        position: absolute;
+    }
+    .wind {
+        width: 50%;
+        right: -10px;
+        position: absolute;
+        word-spacing: 60px;
+        top: 3px;
+    }
+    .wind::before{
+        display: block;
+        content: '\f063';
+        font-family: weathericons;
+        font-size: 25px;
+        left: 0px;
+        position: absolute;
+        top: 5px;
+    }
+
+
+</style>
+
+
+
+
+<!-- Main site Entry button descriptions -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+        <div class="tx-hero__image">
+          <img src="assets/images/global.png" draggable="false">
+        </div>
+        <div class="tx-hero__content">
+          <h1>openIoTwx </h1>
+          <p>Elit occaecat enim esse veniam consequat sunt dolore officia aute.
+        Fugiat minim duis labore pariatur officia magna.    
+        </p>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
+            Get started
+          </a>
+          <!-- <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
+            Go to GitHub
+          </a> -->
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Main site box descriptions -->
+<div class="top-hr">
+    <div class="feature-item">
+        <div class="text-center">
+            <h2>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M15 17v-3h3v-2l4 3.5-4 3.5v-2h-3m2 1v3h-3v2l-4-3.5 4-3.5v2h3M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m9.66-5.27l-2-3.46c-.12-.22-.38-.31-.61-.22l-2.49 1c-.51-.41-1.06-.74-1.69-1l-.37-2.63A.506.506 0 0014 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.26-1.17.59-1.69 1L5 5.05c-.23-.09-.5 0-.61.22l-2 3.46c-.13.21-.08.49.11.64L4.57 11l-.07 1 .07 1-2.11 1.63c-.2.15-.25.43-.12.64l2 3.46c.11.27.4.38.66.27l2.5-1c.24.19.5.37.76.53l1.65-1.4c-.77-.33-1.45-.82-2-1.45l-2.41 1-.77-1.3L6.8 13.8a5.55 5.55 0 010-3.6L4.69 8.65l.75-1.3 2.41 1c.78-.9 1.83-1.53 3-1.78l.4-2.57h1.5l.37 2.62c1.17.24 2.22.88 3 1.77l2.41-1 .75 1.3-2.08 1.51c.09.26.16.53.2.8h2l2.1-1.63a.48.48 0 00.16-.64M12 8c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2m0-6c-2.21 0-4 1.8-4 4 0 1.91 1.35 3.54 3.21 3.92L16 11.86A3.997 3.997 0 0012 8m0 6c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2z" />
+                </svg> -->
+                Print
+            </h2>
+            <img src="assets/images/3d-printer-tool-to-print-svgrepo-com.svg" width="50"/>
+        </div>
+        <p>
+            Commodo nulla ut ea enim ad minim mollit dolore commodo Lorem eiusmod ex
+            exercitation eiusmod. Nisi dolor velit consectetur sit elit laboris dolore
+            dolore ipsum anim aute. Quis fugiat labore cillum voluptate commodo eiusmod
+            culpa eiusmod sunt sint Lorem fugiat pariatur.        
+        </p>
+    </div>
+    <div class="feature-item">
+        <div class="text-center">
+            <h2>
+
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M16 17v2H2v-2s0-4 7-4 7 4 7 4m-3.5-9.5A3.5 3.5 0 109 11a3.5 3.5 0 003.5-3.5m3.44 5.5A5.32 5.32 0 0118 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 00-1.93.59 5 5 0 010 5.82A3.39 3.39 0 0015 11a3.5 3.5 0 000-7z" />
+                </svg> -->
+                Configure
+            </h2>
+            <img src="assets/images/settings-svgrepo-com.svg" width="50"/>
+        </div>
+        <p>
+            Commodo nulla ut ea enim ad minim mollit dolore commodo Lorem eiusmod ex
+            exercitation eiusmod. Nisi dolor velit consectetur sit elit laboris dolore
+            dolore ipsum anim aute. Quis fugiat labore cillum voluptate commodo eiusmod
+            culpa eiusmod sunt sint Lorem fugiat pariatur.        
+        </p>
+    </div>
+    <div class="feature-item">
+        <div class="text-center">
+            <h2>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg> -->
+                Deploy
+            </h2>
+            <img src="assets/images/satellite-dish-svgrepo-com.svg" width="50"/>
+        </div>
+        <p>
+            Commodo nulla ut ea enim ad minim mollit dolore commodo Lorem eiusmod ex
+            exercitation eiusmod. Nisi dolor velit consectetur sit elit laboris dolore
+            dolore ipsum anim aute. Quis fugiat labore cillum voluptate commodo eiusmod
+            culpa eiusmod sunt sint Lorem fugiat pariatur.        
+        
+        </p>
+    </div>
+</div>
+
+<div class="top-hr">
+    <div class="block-item">
+        <h2 class="text-center">Powered by <span class="blu">Open Source</span></h2>
+        <p>
+        Incididunt nisi amet commodo ullamco mollit commodo dolor amet cupidatat
+        ea elit Lorem irure ullamco culpa. Pariatur laboris qui aute eu sint
+        aliqua ad aliquip dolor aliqua excepteur est ex nisi qui. Velit aliqua
+        enim cupidatat fugiat occaecat minim aliquip.
+        </p>
+    </div>
+</div>
+
+<div class="top-hr">
+    <div class="block-item">
+        <h2 class="text-center">Built on <span class="blu">Open Architecture</span></h2>
+        <p>
+        Incididunt nisi amet commodo ullamco mollit commodo dolor amet cupidatat
+        ea elit Lorem irure ullamco culpa. Pariatur laboris qui aute eu sint
+        aliqua ad aliquip dolor aliqua excepteur est ex nisi qui. Velit aliqua
+        enim cupidatat fugiat occaecat minim aliquip.
+        </p>
+    </div>
+    <div>
+        <img src="assets/images/global.png"/>
+    </div>
+</div>
+
+<div class="top-hr">
+    <div class="block-item text-center">
+        <p>
+            <div id="weather-wrapper"></div>
+        </p>
+    </div>
+    <div class="block-item">
+        <h2 class="text-center">Driven by <span class="blu">the Community</span></h2>
+        <p>
+        Incididunt nisi amet commodo ullamco mollit commodo dolor amet cupidatat
+        ea elit Lorem irure ullamco culpa. Pariatur laboris qui aute eu sint
+        aliqua ad aliquip dolor aliqua excepteur est ex nisi qui. Velit aliqua
+        enim cupidatat fugiat occaecat minim aliquip.
+        </p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script>
+    function addBlock( suffix ) {
+       // document.childNodes[0].innerHTML += "<div><span>&nbsp; --</span></div>"
+       var wrapper = document.createElement("div");
+       wrapper.setAttribute("id","weather-wrapper");
+       console.log(wrapper);
+ 
+       
+       var card = wrapper.appendChild(document.createElement("div"));
+       card.setAttribute("class","weatherCard");
+       
+       var temp = card.appendChild(document.createElement("div"));
+       temp.setAttribute("class","currentTemp");
+       temp.appendChild(
+          document
+             .createElement("span"));
+       temp.childNodes[0].className = "location";
+       temp.childNodes[0].innerText = "OpenIoTwx"+"\n"+suffix;
+       
+       temp.appendChild(
+          document
+             .createElement("span"));
+       
+       temp.childNodes[1].className = "temp";
+       temp.childNodes[1].appendChild(document.createElement("div"));
+       temp.childNodes[1].firstChild.id = suffix+"t1";
+       temp.childNodes[1].firstChild.innerText = "N/A";
+             
+       
+       var current = card.appendChild(document.createElement("div"));
+       current.setAttribute("class","currentWeather");
+       current.appendChild(document.createElement("div"));
+       current.appendChild(document.createElement("div"));
+       current.appendChild(document.createElement("div"));
+ 
+ 
+       /* poor person's way of jacking in html */
+       current.childNodes[0].innerHTML = 
+       '<span class="date"><div id="'+suffix+'dt">---</div></span><span class="time"><div id="'+suffix+'tm">--:--</div></span>'
+       
+       current.childNodes[1].innerHTML = `
+          <div>
+             <span class="conditions">
+                <div id="`+suffix+`ico">--<br></div>
+                 </span>	
+                 <span>
+                <div class="rad">
+                   <span>UV&nbsp;</span>
+                   <span id="`+suffix+`uv">--</span>
+                </div>
+             </span>
+          </div>`;
+ 
+       current.childNodes[2].innerHTML = `
+          <div class="info">
+                <span class="rain"><div id="`+suffix+`h1" style="font-size: 20px; padding-left: 8px; padding-top: 8px;">--</div></span>
+                <span class="wind"><div id="`+suffix+`gas">--</div>VOC</span>
+          </div>`;
+       
+       document.getElementById("weather-wrapper").innerHTML = wrapper.innerHTML
+       // document.body.appendChild(wrapper);
+    }
+</script>
+<script>
+    const station_list = ['bb03'];
+    for (let i = 0; i < station_list.length; i++) {
+       addBlock(station_list[i]);
+    }
+    
+    // Initialize a mqtt variable globally
+    console.log(mqtt);
+    console.log(window);
+    const yaml = window.yaml;
+ 
+    const options = {
+         clean: true, // retain session
+       connectTimeout: 4000, // Timeout period
+       // Authentication information
+       clientId: '',
+       username: '',
+       password: '',
+    }
+    // const connectUrl = 'ws://159.223.176.132:9001'
+    const connectUrl = 'wss://app.iotwx.net:9883'
+    const client = mqtt.connect(connectUrl, options)
+ 
+    var tm_stamp = -1;
+    const day_list = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const month_list = ['Jan', 'Feb', 'Mar',
+                   'Apr', 'May', 'Jun',
+                   'Jul', 'Aug', 'Sep',
+                   'Oct', 'Nov', 'Dec'];
+    
+    client.on('connect', function() {
+       console.log('MQTT client connected');
+       client.subscribe('iotwx/net/#');   // now we are connected: let's publish or subscribe...
+    });
+ 
+    client.on('message', (topic, message) => {
+      console.log('receive message：', topic, message.toString())
+      payload = message.toString();
+      const doc = jsyaml.load(payload);
+      var suffix = doc['device'].slice(-4);
+ 
+      if (station_list.includes(suffix)) {
+       // temp
+       if (doc['sensor'].endsWith("temperature")) {
+          var temp = (doc['m']*(9/5)+32).toFixed(2);
+          document.getElementById(suffix+"t1").innerText = temp;
+       }
+       // humidity
+       if (doc['sensor'].endsWith("humidity")) {
+          document.getElementById(suffix+'h1').innerText = doc['m'].toFixed(2);
+          console.log(doc['m']);
+       }
+       // voc
+       if (doc['sensor'].endsWith("gas")) {
+          document.getElementById(suffix+'gas').innerText = doc['m'].toFixed(2);
+          console.log(doc['m']);
+       }
+ 
+       // uv
+       if (doc['sensor'].endsWith("uv")) {
+          document.getElementById(suffix+'uv').innerText = doc['m'].toFixed(2);
+          console.log(doc['m']);
+       }
+ 
+       tm_stamp = new Date(doc['t'] * 1000);					
+          
+       var hours = tm_stamp.getHours();
+       var minutes = tm_stamp.getMinutes();
+       var day = tm_stamp.getDay();
+       var date = tm_stamp.getDate();
+       var month = tm_stamp.getMonth();
+       var year = tm_stamp.getFullYear();
+ 
+       document.getElementById(suffix+'tm').innerText = 
+          String(hours).padStart(2, '0') + ":" + 
+          String(minutes).padStart(2,'0');
+ 
+       document.getElementById(suffix+'dt').innerText = 
+          day_list[day] + " " +
+          month_list[month] + " " +
+          String(date).padStart(2, '0') + ", " +
+          year;
+ 
+ 
+       var ico;
+       switch(true) {
+          case (hours >=6 && hours < 8):
+             ico = "&#xf051;"; break;
+          case (hours >=8 && hours <= 17):
+             ico = "&#xf00d;"; break;
+          case (hours >=18 && hours <= 19):
+             ico = "&#xf047;"; break;
+          case (hours >=20 || hours < 2):
+             ico = "&#xf02e;"; break;
+          case (hours > 2 && hours < 6):
+             ico = "&#xf077;"; break;
+       }
+ 
+       document.getElementById(suffix+"ico").innerHTML = ico ;
+      }
+    });
+ 
+ </script>
+
+
+
+
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
