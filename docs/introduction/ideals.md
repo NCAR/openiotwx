@@ -43,9 +43,11 @@ sharing of data, code, hardware  community earth system science data and ideas.
 
 ## FAIR and CARE 
 We are committed to the Findability, Accessibility, Interoperability, and Reuse
-(FAIR) of all digital assets needed to design, modify, build, deploy, analyze
-and archive the openIoTwx station. The FAIR principle as defined by GO-FAIR.ORG
-is a core value that will help make this community open and accessible to all.
+(FAIR) of all digital assets (see
+[https://www.go-fair.org/fair-principles/](https://www.go-fair.org/fair-principles/))
+needed to design, modify, build, deploy, analyze and archive the openIoTwx
+station. The FAIR principle as defined by GO-FAIR.ORG is a core value that will
+help make this community open and accessible to all.
 
 Additionally, we also balance adherence to FAIR principles with CARE
 ([https://www.gida-global.org/care](https://www.gida-global.org/care)) or
