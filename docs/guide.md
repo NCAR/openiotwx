@@ -4,7 +4,7 @@ We, the Open IoTwx team, have worked to make the documentation for making your o
 friendly as possible. That being said, this project does require some care and effort, so we thought 
 we'd include something of a step-by-step for you to refer to in case you find yourself a little lost.
 
-1. Give this documentation a quick read-through. See what this project entails and what you need 
+1. Give this documentation a quick read-through. See what this project entails and what you need to
 learn or already know.
 2. Make a plan. Figure out what 3d printer you'll buy/use, which sensors you want to attach, etc.
 3. Download all the needed [software](getting-started/software.md)
