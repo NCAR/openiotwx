@@ -18,7 +18,7 @@ communications and initialization functions of each node.
 !!! info  "IoTwx Core Library"
 
     The core library can found at the following repository. It should be
-    installed in your `Arduiono/libraries` directory and once installed, you
+    installed in your `Arduino/libraries` directory and once installed, you
     may use it by the `#include "IoTwx.h"` directive.
 
 
@@ -28,9 +28,13 @@ communications and initialization functions of each node.
 
 ## Preparing Your System
 
-You will need to install the [latest version of Arduino](https://www.arduino.cc/en/Main/Software) on your system to begin.
+First, download Arduino 1.8 - this is an old release but in order to use the correct data format, SPIFFS, you must use Arduino 1.8. Download Arduino 1.8.19 following this [link](https://www.arduino.cc/en/Main/Software). If this is changed in Arduino IDE, IoTWX will adapt accordingly. 
 
 There are a few other steps you will need to complete:
+
+Next, download the following packages. The easiest way to do this is to follow the github links and click download as zip. 
+From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages.
+
 
 * install the required ESP32 Pico / M5 Stack Atom lite boards; a comprehensive instruction set is [here](https://docs.m5stack.com/#/en/arduino/arduino_development)
 * install the [arduino-esp32fs-plugin](https://github.com/me-no-dev/arduino-esp32fs-plugin) that will allow SPIFFS file uploads to ESP32 boards
@@ -45,12 +49,11 @@ There are a few other steps you will need to complete:
 
 ## Editing and Flashing Configuration Files
 
-Each node must contain a configuration file in order to operate.  The file contains information about WiFi connections, MQTT connections and some information about the node.
+Your microcontroller must contain a configuration file to operate.  The file contains information about WiFi connections, MQTT (the way your station will send data) connections and some other relevant information.
 
 
-
-The [ESP32 SPIFFS filesystem](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html) is used to store the configuration.  In the repositories of each node, you will find a `/data` folder which contains a `config.json` file.
-
+The microntroller uses an [ESP32 SPIFFS filesystem](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html) to store the configuration. 
+In the folder that you will flash onto your mictrocontroller, you will find a `/data` folder which contains a `config.json` file.
 
 
 ### Understanding the `config.json` file
@@ -74,7 +77,13 @@ The typical config file  looks like this:
 }
 ```
 
-With details of each key described below.
+Much of this information is unnecessary for the functioning of your station. It is all quite 
+interesting if you are using this project academically but, if not, the only things you will need 
+to edit are "iotwx_wifi_pwd", "iotwx_wifi_ssid", and "iotwx_topic" (if you want to publish somewhere
+other than the main measurement hub).
+
+
+The details of each key are described below.
 
 | key | value / description |
 |:--:|:---|
@@ -88,4 +97,4 @@ With details of each key described below.
 | `iotwx_timezone` | the GMT offset in seconds of the station timezone. (e.g. `"21600"`)|
 | `iotwx_wifi_pwd` and `iotwx_wifi_ssid` | are the corresponding wifi password and ssid of the network your node will connect to.  Note, it is not necessary (but would be unusual) for all nodes to connect to the same WiFi network. (e.g. `"your_wifi"` and `"your_password"`)|
 | `iotwx_topic` | the MQTT topic your node will publish to.  It is not necessary for all nodes to publish to the same topic, but if you are using the CHORDS MQTT Orchestrator ([GitHub - NCAR/chords-mqtt-orchestrator](https://github.com/NCAR/chords-mqtt-orchestrator)), then you will need to adjust it accordingly to route your messages where they belong.  The current default is `"iotwx/net"`. |
-| `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run at frequencies up to 240, but has only been tested down 40 Mhz.  The AeroNode must be set to above `"160"` and runs best at `"240"`.  The Hydro node has been successfully configured at `"40"`  and the Atmos node's best performance is at `"80"`.  Varying the value has power-saving benefits, where we have seen 20-50% reduction in power consumption of a node. |
+| `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run at frequencies up to 240, but has only been tested down 40 Mhz. Varying the value has power-saving benefits, where we have seen 20-50% reduction in power consumption of a node. |

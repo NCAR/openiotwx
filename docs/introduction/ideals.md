@@ -49,18 +49,17 @@ needed to design, modify, build, deploy, analyze and archive the openIoTwx
 station. The FAIR principle as defined by GO-FAIR.ORG is a core value that will
 help make this community open and accessible to all.
 
-Additionally, we also balance adherence to FAIR principles with CARE
+We balance adherence to FAIR principles with CARE
 ([https://www.gida-global.org/care](https://www.gida-global.org/care)) or
 Collective Benefit, Authority to Control, Responsibility, and Ethics. This is
-particularly important for our community members from tribal communities and
-other marginalized or under-represented groups. Please review the CARE principle
-summary.
+important for our community members from tribal communities and
+other marginalized groups. Please review the CARE principle
+summary as linked above.
 
-## FPIC Free 
-Prior and Informed Consent (FPIC) is a specific right that pertains to
+## FPIC 
+Free Prior and Informed Consent (FPIC) is a specific right that pertains to
 indigenous peoples and is recognised in the United Nations Declaration on the
 Rights of Indigenous Peoples (UNDRIP). It allows them to give or withhold
 consent to a project that may affect them or their territories. This is another
-core ideal of the Open IoTwx community and should also be reviewed. go to (for
-more see
-[https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/](https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/))
+core ideal of the Open IoTwx community and should also be reviewed. (for
+more see [https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/](https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/))
