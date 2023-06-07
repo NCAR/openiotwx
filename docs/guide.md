@@ -7,7 +7,7 @@ we'd include something of a step-by-step for you to refer to in case you find yo
 1. Give this documentation a quick read-through. See what this project entails and what you need to
 learn or already know.
 2. Make a plan. Figure out what 3d printer you'll buy/use, which sensors you want to attach, etc.
-3. Download all the needed [software](getting-started/software.md)
+3. Download all the needed [software](getting-started/software.md).
 It's always good to make sure your computer can do what you need. 
 4. Get your [materials](getting-started/materials.md). 
 Buy the items you need so you can streamline the process when parts arrive.

@@ -3,7 +3,7 @@ openIoTwx is made up of a diverse community, all contributing to build,
 customize, and deploy weather stations. A core belief of ours is that these stations should be
 accessible for all researchers no matter the size of the institution, 
 the scale of the planned work, the discipline of the research, or the 
-background of the requestor. 
+background of the user. 
 
 All are welcome to help with this project, no degree in computer science or engineering needed.
 Our community includes 

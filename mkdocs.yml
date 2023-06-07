@@ -8,11 +8,11 @@ theme:
 nav:
   - Home:
     - Welcome: "index.md"
+  - Guide Usage: "guide.md"
   - openIoTwx Introduction:
     - Platform: "introduction/platform.md"
     - Community: "introduction/community.md"
     - Ideals: "introduction/ideals.md"
-  - Guide Usage: "guide.md"
   - Getting Started:
     - Materials list: "getting-started/materials.md"
     - Computing needs: "getting-started/computing.md"
@@ -21,7 +21,7 @@ nav:
     - Core Unit:  "print/core_print.md"
     - Accessory Nodes: "print/accessory_print.md"
   - Install:
-    - Core Unit: "installation/core_install.md"
+    - Flash: "installation/core_install.md"
     - Arduino Code: "installation/code.md"
   - Assemble:
     - Testing: "assemble/testing.md"
@@ -30,8 +30,7 @@ nav:
   - Deploy: #Include calibration?
     - Core Unit: "deploying/core_deploy.md"
     - Accessory Nodes: "deploying/accessory_deploy.md"
-  - Data Management: 
-    - CHORDS: "data_management/data.md"
+  - Data Management: "data_management.md"
   - Contribution: "contribution.md"
 
 markdown_extensions:

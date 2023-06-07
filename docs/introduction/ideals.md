@@ -1,9 +1,9 @@
 # Ideals
 The "Internet of Things" (IoT) revolution is about the world of sensors,
-software and electronics, allowing ubiquitous, low-cost and high quality
-measurements of many things, including our earth system. Due to low
+software, and electronics. It allows for ubiquitous, low-cost, and high quality
+measurements of many things, including our Earth system. Due to low
 cost-barriers, these sensing systems are now broadly accessible to many
-communities piquing new interest in measurements and data relating to the all
+communities. We hope that openIoTwx can continue piquing new interest in measurements and data relating to the all
 aspects of our environment around us. We advise all members of our community to
 review and regularly reflect on the core ideals outlined here.
 

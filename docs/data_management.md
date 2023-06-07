@@ -1,5 +1,4 @@
-Mostly talk about and link CHORDS.
-Mention personal server creation, installation of client, broker
+# Data Management and CHORDS
 
 There are many ways you can approach collecting, visualizing, analyzing, and utilizing, the data
 from your station/s. Because Open IoTwx relies on an MQTT protocol, it must send its data to a broker.
