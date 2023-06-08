@@ -19,7 +19,7 @@ nav:
     - Software tools: "getting-started/software.md"
   - Print:
     - Core Unit:  "print/core_print.md"
-    - Accessory Nodes: "print/accessory_print.md"
+      #  - Accessory Nodes: "print/accessory_print.md"
   - Install:
     - Flash: "installation/core_install.md"
     - Arduino Code: "installation/code.md"
