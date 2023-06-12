@@ -1,6 +1,6 @@
 # Software
 
-First, download Arduino 1.8.18 (LINK,LINK,LINK). This is an old release but in order to use the correct data 
+First, download Arduino 1.8.18. This is an old release but in order to use the correct data 
 format, SPIFFS, you must use Arduino 1.8. If this is changed in Arduino IDE, 
 IoTWX will adapt accordingly.
 

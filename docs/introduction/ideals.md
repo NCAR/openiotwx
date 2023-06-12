@@ -7,10 +7,10 @@ communities. We hope that openIoTwx can continue piquing new interest in measure
 aspects of our environment around us. We advise all members of our community to
 review and regularly reflect on the core ideals outlined here.
 
-The goals and core ideals of the open IoTwx project is _to advance low cost IoT
+The goals and core ideals of the openIoTwx project is _to advance low cost IoT
 based geoscience observational projects_ via four objectives that align with and
 build upon the National Science Foundation's (NSF) investments in the EarthCube
-Community, ACCESS/Jetstream, 3D printed weather stations (aka "Open IoTWx") and
+Community, ACCESS/Jetstream, 3D printed weather stations (aka "openIoTWx") and
 future needs:
 
 (1) create an open, diverse, community-driven and community-managed ecosystem to
@@ -61,5 +61,5 @@ Free Prior and Informed Consent (FPIC) is a specific right that pertains to
 indigenous peoples and is recognised in the United Nations Declaration on the
 Rights of Indigenous Peoples (UNDRIP). It allows them to give or withhold
 consent to a project that may affect them or their territories. This is another
-core ideal of the Open IoTwx community and should also be reviewed. (for
+core ideal of the openIoTwx community and should also be reviewed. (for
 more see [https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/](https://www.fao.org/indigenous-peoples/our-pillars/fpic/en/))

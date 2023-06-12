@@ -14,14 +14,13 @@ Any of these nodes can be attached to the body using universal one inch screw-in
 connectors. This approach allows for any 1" PVC pipe or other threaded connector to be 
 used as a base for the station. This specification was chosen due to how commonly 
 available it is to find components that fit. The body of the station has threaded 
-connectors. There are two on top, two below, and one on the side, to provide a universal 
-platform that our community can build upon. 
+connectors. Depending on the housing used, there are between three and five ports. 
 
 Users are provided with a starter set of screw in adaptors for an initial 
-set of sensors such as the RG15 digital rain sensor, Sonic 
-anemometer, air quality monitor, and radiation shields. We also provide screw-in connectors with a 
+set of sensors such as the RG15 digital rain sensor, 
+air quality monitor, and radiation shields. We also provide screw-in connectors with a 
 cap so that users can cap off connectors not in use and deploy. This prevents water and 
 dust from getting into the electronics. Should a user want to attach a new sensor, they 
-can modify the 3D Printable design files (provided in the print section) for whatever their 
+can modify the 3D design files (provided in the print section) for whatever their 
 needs demand.
 

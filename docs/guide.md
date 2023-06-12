@@ -11,7 +11,7 @@ learn or already know.
 It's always good to make sure your computer can do what you need. 
 4. Get your [materials](getting-started/materials.md). 
 Buy the items you need so you can streamline the process when parts arrive.
-5. Start [printing](print/core_print.md). This step takes the most time so it's good to get the printer running early.
+5. Start [printing](print.md). This step takes the most time so it's good to get the printer running early.
 6. [Flash](installation/core_install.md) your microcontroller. 
 This step may seem confusing but just follow the page carefully and it'll start making sense.
 7. Setup your modem (if necessary for your configuration) according to manufacturers instructions. 

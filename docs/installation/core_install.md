@@ -1,29 +1,28 @@
 # Flashing Microcontrollers
 
-Each station node is build atop a microcontroller, where each
+Each station node is build with a microcontroller as its brain. Each
 microcontroller is connected to one or more sensors either directly or
 by hubs -- [Grove hubs](https://www.seeedstudio.com/Grove-I2C-Hub.html) or [Qwiic hubs](https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html). 
 
 IotWx is designed to be used with the [m5Stack Atom Lite](https://m5stack.com/collections/m5-core/products/atom-lite-esp32-development-kit)
-ESP32-Pico based microcontroller, but it is possible to connect other microcontroller devices with small modifications to the codebase, though technically _any_ ESP32 chip with enough memory would work.
+ESP32-Pico based microcontroller, but it is possible to connect other microcontroller devices with a few modifications to the code. Technically _any_ ESP32 chip with enough memory would work.
+That being said, the M5 atom lite is quite cheap and easy to purchase, and we thus suggest that one.
 
-## Core IoTwx library installation
+## IoTwx library installation
 
-There are two nodes that the core Arduino code has been developed for.
 Before compiling the microcode onto the Arduino, you will also need to
-install the core IoTwx shared library which controls many of the
-communications and initialization functions of each node.
+install the IoTwx library which controls the
+communications and initialization functions of the station.
 
 
-!!! info  "IoTwx Core Library"
+!!! info  "IoTwx Library"
 
-    The core library can found at the following repository. It should be
+    The library can found at the following repository. It should be
     installed in your `Arduino/libraries` directory and once installed, you
     may use it by the `#include "IoTwx.h"` directive.
 
 
     * [https://github.com/NCAR/esp32-atomlite-arduino-iotwx](https://github.com/NCAR/esp32-atomlite-arduino-iotwx)
-
 
 
 ## Preparing Your System
@@ -33,21 +32,42 @@ First, download Arduino 1.8 - this is an old release but in order to use the cor
 There are a few other steps you will need to complete:
 
 Next, download the following packages. The easiest way to do this is to follow the github links and click download as zip. 
-From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages.
+From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages that aren't native in the Arduino IDE libray set.
 
 
 * install the required ESP32 Pico / M5 Stack Atom lite boards; a comprehensive instruction set is [here](https://docs.m5stack.com/#/en/arduino/arduino_development)
 * install the [arduino-esp32fs-plugin](https://github.com/me-no-dev/arduino-esp32fs-plugin) that will allow SPIFFS file uploads to ESP32 boards
-* install the following libraries through the Arduino IDE:
+* install the following libraries through the Arduino IDE or through the zip link:
     * MQTT library from 256dpi [https://github.com/256dpi/arduino-mqtt](https://github.com/256dpi/arduino-mqtt)
-    * SeeedStudio VEML6070 library [https://github.com/Seeed-Studio/Seeed_VEML6070](https://github.com/Seeed-Studio/Seeed_VEML6070)
-    * SeeedStudio BME280 library [https://github.com/Seeed-Studio/Grove_BME280](https://github.com/Seeed-Studio/Grove_BME280)
-    * SeeedStudio BME680 library [https://github.com/Seeed-Studio/Seeed_BME680](https://github.com/Seeed-Studio/Seeed_BME680)
     * ArduinoJson library [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson)
     * FastLED library [https://github.com/FastLED/FastLED](https://github.com/FastLED/FastLED)
     * NTPClient library [https://github.com/arduino-libraries/NTPClient](https://github.com/arduino-libraries/NTPClient)
+    * Adafruit BME680 [https://github.com/adafruit/Adafruit_BME680](https://github.com/adafruit/Adafruit_BME680)
+    * Adafruit LTR390 [https://github.com/adafruit/Adafruit_LTR390](https://github.com/adafruit/Adafruit_LTR390)
+    * RG-15 Rain Gauge [https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/](https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/)
 
-## Editing and Flashing Configuration Files
+If ESP32 isn't downloaded underneath the board manager, download it. 
+Once ESP32 is downloaded, select it within board manager and use version WHAT VERSION
+When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module
+
+This will add a number of options underneath your tools section.
+Select:
+    * Upload speed 115200
+    * CPU Frequency: 240
+    * Flash Frequency:80
+    * Flash mode: QIO
+    * Flash size: 4 MB
+    * Partition scheme: Huge APP
+    * PSram: disabled
+    * Leave the rest as default if that setting was not already the default mode
+
+## Cloning the file structure
+
+Next, clone the github REPO (LINK,LINK,LINK) into Arduino. 
+Alternatively, click this link and download the zip of the file structure. 
+There should be code, a data directory, and within the data directory, a config.json
+
+## Editing Configuration Files
 
 Your microcontroller must contain a configuration file to operate.  The file contains information about WiFi connections, MQTT (the way your station will send data) connections and some other relevant information.
 
@@ -77,11 +97,6 @@ The typical config file  looks like this:
 }
 ```
 
-Much of this information is unnecessary for the functioning of your station. It is all quite 
-interesting if you are using this project academically but, if not, the only things you will need 
-to edit are "iotwx_wifi_pwd", "iotwx_wifi_ssid", and "iotwx_topic" (if you want to publish somewhere
-other than the main measurement hub).
-
 
 The details of each key are described below.
 
@@ -98,3 +113,9 @@ The details of each key are described below.
 | `iotwx_wifi_pwd` and `iotwx_wifi_ssid` | are the corresponding wifi password and ssid of the network your node will connect to.  Note, it is not necessary (but would be unusual) for all nodes to connect to the same WiFi network. (e.g. `"your_wifi"` and `"your_password"`)|
 | `iotwx_topic` | the MQTT topic your node will publish to.  It is not necessary for all nodes to publish to the same topic, but if you are using the CHORDS MQTT Orchestrator ([GitHub - NCAR/chords-mqtt-orchestrator](https://github.com/NCAR/chords-mqtt-orchestrator)), then you will need to adjust it accordingly to route your messages where they belong.  The current default is `"iotwx/net"`. |
 | `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run at frequencies up to 240, but has only been tested down 40 Mhz. Varying the value has power-saving benefits, where we have seen 20-50% reduction in power consumption of a node. |
+
+## Flashing onto the microcontroller
+
+Once you have everything set up within Arduino IDE, compile everything you just did. If that works with no errors, plug the microcontroller into your computer, and flash onto it. (ADD MORE DETAILS HERE)
+
+

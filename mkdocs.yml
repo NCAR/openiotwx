@@ -17,9 +17,7 @@ nav:
     - Materials list: "getting-started/materials.md"
     - Computing needs: "getting-started/computing.md"
     - Software tools: "getting-started/software.md"
-  - Print:
-    - Core Unit:  "print/core_print.md"
-      #  - Accessory Nodes: "print/accessory_print.md"
+  - Print: "print.md"
   - Install:
     - Flash: "installation/core_install.md"
     - Arduino Code: "installation/code.md"
