@@ -22,6 +22,7 @@ nav:
     - Flash: "installation/core_install.md"
     - Arduino Code: "installation/code.md"
   - Assemble:
+    - Power and Internet: 'assemble/connection.md'
     - Testing: "assemble/testing.md"
     - Core Unit: "assemble/core.md"
     - Accessory Node Addition: "assemble/accessory_assemble.md"

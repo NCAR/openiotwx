@@ -32,7 +32,7 @@ First, download Arduino 1.8 - this is an old release but in order to use the cor
 There are a few other steps you will need to complete:
 
 Next, download the following packages. The easiest way to do this is to follow the github links and click download as zip. 
-From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages that aren't native in the Arduino IDE libray set.
+From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages that aren't native in the Arduino IDE library set.
 
 
 * install the required ESP32 Pico / M5 Stack Atom lite boards; a comprehensive instruction set is [here](https://docs.m5stack.com/#/en/arduino/arduino_development)
