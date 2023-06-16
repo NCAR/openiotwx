@@ -38,3 +38,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+
+extra_files:
+  - print_files
+
