@@ -10,7 +10,9 @@ settings to generate the gcode - quite easy.
 
 ### Housing options
 
-Dome Housing: [stl](../print_files/sphere_housing/Sphere_Housing.stl), [step](../print_files/sphere_housing/Sphere_Housing.step), gcode link
+Dome Housing: [stl](../print_files/sphere_housing/sphere_housing.stl), 
+[step](../print_files/sphere_housing/sphere_housing.step), 
+gcode link
 
 Large Housing: 
 [stl](../print_files/large_housing/large_housing.stl), 
@@ -18,8 +20,8 @@ Large Housing:
 gcode link
 
 Lid for Large Housing: 
-[stl](../print_files/large_Lid/large_Lid.stl), 
-[step](../print_files/large_Lid/large_Lid.step)
+[stl](../print_files/large_housing/large_Lid.stl), 
+[step](../print_files/large_housing/large_Lid.step)
 , gcode link
 
 
