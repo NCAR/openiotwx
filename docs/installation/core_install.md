@@ -45,6 +45,8 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
     * Adafruit BME680 [https://github.com/adafruit/Adafruit_BME680](https://github.com/adafruit/Adafruit_BME680)
     * Adafruit LTR390 [https://github.com/adafruit/Adafruit_LTR390](https://github.com/adafruit/Adafruit_LTR390)
     * RG-15 Rain Gauge [https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/](https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/)
+    * ESP Software Serial [https://github.com/plerup/espsoftwareserial](https://github.com/plerup/espsoftwareserial)
+
 
 If ESP32 isn't downloaded underneath the board manager, download it. 
 Once ESP32 is downloaded, select it within board manager and use version WHAT VERSION
@@ -52,14 +54,16 @@ When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module
 
 This will add a number of options underneath your tools section.
 Select:
-    * Upload speed 115200
-    * CPU Frequency: 240
-    * Flash Frequency:80
-    * Flash mode: QIO
-    * Flash size: 4 MB
-    * Partition scheme: Huge APP
-    * PSram: disabled
-    * Leave the rest as default if that setting was not already the default mode
+
+* Upload speed 115200
+* CPU Frequency: 240
+* Flash Frequency:80
+* Flash mode: QIO
+* Flash size: 4 MB
+* Partition scheme: Huge APP
+* PSram: disabled
+
+Leave the rest as default if that setting was not already the default mode
 
 ## Cloning the file structure
 
@@ -116,6 +120,11 @@ The details of each key are described below.
 
 ## Flashing onto the microcontroller
 
-Once you have everything set up within Arduino IDE, compile everything you just did. If that works with no errors, plug the microcontroller into your computer, and flash onto it. (ADD MORE DETAILS HERE)
+Once you have everything set up within Arduino IDE, compile everything you just did. If that works with no errors, plug the microcontroller into your computer, and flash onto it.
+Additionally, make sure to do an ESP32 Sketch Data Upload (under Tools). This will upload your config.json. You don't need to reflash the whole microcontroller if you need to update the config, just redo this step.
+
+## Configuring data upload
+
+While this isn't necessarily under the direct purview of openIoTwx, and is more covered by whatever orchestrator and other clients you decide to use, it is worth noting that your topic in the config needs to then be matched and set up within your orchestrator and then in your data collection / visualization client (CHORDS for us).
 
 
