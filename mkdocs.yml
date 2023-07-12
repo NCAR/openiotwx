@@ -27,8 +27,8 @@ nav:
     - Core Unit: "assemble/core.md"
     - Accessory Node Addition: "assemble/accessory_assemble.md"
   - Deploy: #Include calibration?
-    - Core Unit: "deploying/core_deploy.md"
-    - Accessory Nodes: "deploying/accessory_deploy.md"
+    - Field Deployment: "deploying/field_deployment.md"
+    - Urban Deployment: "deploying/home_deployment.md"
   - Data Management: "data_management.md"
   - Contribution: "contribution.md"
 
