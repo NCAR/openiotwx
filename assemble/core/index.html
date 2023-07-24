@@ -12,7 +12,7 @@
         <link rel="prev" href="../testing/">
       
       
-        <link rel="next" href="../accessory_assemble/">
+        <link rel="next" href="../../deploying/field_deployment/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
@@ -539,20 +539,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../accessory_assemble/" class="md-nav__link">
-        Accessory Node Addition
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -687,14 +673,14 @@
 
 <h1 id="assembling-the-main-unit">Assembling the Main Unit</h1>
 <p>Once you have made sure that the sensors are all functional and uploading data, assemble the station.</p>
-<ol>
-<li>Attach housing lid to housing body, placing microcontroller inside</li>
-<li>Run power cable to outside the housing for deployment ease.</li>
-<li>Attach radiation shield with the BME680 atmospheric sensor housed inside</li>
-<li>Attach UV sensor and house inside UV assembly</li>
-<li>Attach and connect Rain gauge (WIRING)</li>
-</ol>
-<p>All other sensors are covered in <a href="../accessory_assemble/">Accessory Assembly</a></p>
+<p>Print all components that are necessary. The Microcontroller, primary wiring center are housed in the spherical housing.</p>
+<p>Atmospheric sensors are housed in the radiation shield, UV in the 'UV tube' and 'UV cap', the rain gauge is removed from its original mount and transferred onto a threaded base, and the air quality sensor is housed in the 'AQ' system.</p>
+<p>The Hydreon RG15 rain sensor is separated from its original base by removing the four attached Phillips head screws. From there connect a GPIO to Grove wire-set to the pins on the RG15 circuit. Red-5v Black-Ground Yellow-in White-out. </p>
+<p>As the RG15 relies on UART for communication, this connection will monopolize the microcontrollers port.</p>
+<p>Because of this, the user must also attach a GPIO to qwiic connect setup on pins 21 and 25 of the microcontroller.That qwiic is then attached to a four way qwiic splitter. </p>
+<p>One is connected to the UV, another is attached to the Air Quality sensor (PMSA003I), another is attached to the BME680 atmospheric sensor. If the user wishes to attach more qwiic I2C sensors, they can either be daisy chained to these listed sensors or connected to another splitter. We have yet to reach an upper bound on these qwiic I2C connections.</p>
+<p>First, wire up the entire system, connect it to a power source and wireless signal, and run diagnostics to make sure data is being received by other clients. Once that is complete, place each sensor in its respective housing and attach all components.</p>
+<p>From there, all the user must do is mount in their preferred location. For the measurements to be usable on a scale outside of a personal use case, this must be 1.5-2 meters off the ground, in a representative area compared to the surrounding environment, and isolated from buildings. </p>
 
 
 

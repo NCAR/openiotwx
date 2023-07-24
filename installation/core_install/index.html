@@ -618,20 +618,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../assemble/accessory_assemble/" class="md-nav__link">
-        Accessory Node Addition
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -831,7 +817,7 @@
 <p>Each station node is build with a microcontroller as its brain. Each
 microcontroller is connected to one or more sensors either directly or
 by hubs -- <a href="https://www.seeedstudio.com/Grove-I2C-Hub.html">Grove hubs</a> or <a href="https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html">Qwiic hubs</a>. </p>
-<p>IotWx is designed to be used with the <a href="https://m5stack.com/collections/m5-core/products/atom-lite-esp32-development-kit">m5Stack Atom Lite</a>
+<p>openIotWx is designed to be used with the <a href="https://m5stack.com/collections/m5-core/products/atom-lite-esp32-development-kit">m5Stack Atom Lite</a>
 ESP32-Pico based microcontroller, but it is possible to connect other microcontroller devices with a few modifications to the code. Technically <em>any</em> ESP32 chip with enough memory would work.
 That being said, the M5 atom lite is quite cheap and easy to purchase, and we thus suggest that one.</p>
 <h2 id="iotwx-library-installation">IoTwx library installation</h2>
@@ -864,6 +850,11 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
 <li>Adafruit LTR390 <a href="https://github.com/adafruit/Adafruit_LTR390">https://github.com/adafruit/Adafruit_LTR390</a></li>
 <li>RG-15 Rain Gauge <a href="https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/">https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/</a></li>
 <li>ESP Software Serial <a href="https://github.com/plerup/espsoftwareserial">https://github.com/plerup/espsoftwareserial</a></li>
+<li>Adafruit Air Quality <a href="https://github.com/adafruit/Adafruit_PM25AQI">https://github.com/adafruit/Adafruit_PM25AQI</a></li>
+<li>Adafruit SHT4x <a href="https://github.com/adafruit/Adafruit_SHT4X">https://github.com/adafruit/Adafruit_SHT4X</a></li>
+<li>Wifi (Native in library)</li>
+<li>Adafruit_Sensor <a href="https://github.com/adafruit/Adafruit_Sensor">https://github.com/adafruit/Adafruit_Sensor</a></li>
+<li>I2C control <a href="https://github.com/Sensirion/arduino-i2c-scd4x">https://github.com/Sensirion/arduino-i2c-scd4x</a></li>
 </ul>
 </li>
 </ul>
@@ -883,7 +874,7 @@ Select:</p>
 </ul>
 <p>Leave the rest as default if that setting was not already the default mode</p>
 <h2 id="cloning-the-file-structure">Cloning the file structure</h2>
-<p>Next, clone the github REPO (LINK,LINK,LINK) into Arduino. 
+<p>Next, clone the <a href="https://github.com/NCAR/esp32-atomlite-arduino-base">Github respository</a> into Arduino. 
 Alternatively, click this link and download the zip of the file structure. 
 There should be code, a data directory, and within the data directory, a config.json</p>
 <h2 id="editing-configuration-files">Editing Configuration Files</h2>
