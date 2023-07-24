@@ -4,7 +4,7 @@ Each station node is build with a microcontroller as its brain. Each
 microcontroller is connected to one or more sensors either directly or
 by hubs -- [Grove hubs](https://www.seeedstudio.com/Grove-I2C-Hub.html) or [Qwiic hubs](https://www.seeedstudio.com/Grove-Qwiic-Hub-p-4531.html). 
 
-IotWx is designed to be used with the [m5Stack Atom Lite](https://m5stack.com/collections/m5-core/products/atom-lite-esp32-development-kit)
+openIotWx is designed to be used with the [m5Stack Atom Lite](https://m5stack.com/collections/m5-core/products/atom-lite-esp32-development-kit)
 ESP32-Pico based microcontroller, but it is possible to connect other microcontroller devices with a few modifications to the code. Technically _any_ ESP32 chip with enough memory would work.
 That being said, the M5 atom lite is quite cheap and easy to purchase, and we thus suggest that one.
 
@@ -46,7 +46,11 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
     * Adafruit LTR390 [https://github.com/adafruit/Adafruit_LTR390](https://github.com/adafruit/Adafruit_LTR390)
     * RG-15 Rain Gauge [https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/](https://rainsensors.com/docs/rg-guides/rg-arduino/hydreon-arduino-library/)
     * ESP Software Serial [https://github.com/plerup/espsoftwareserial](https://github.com/plerup/espsoftwareserial)
-
+    * Adafruit Air Quality [https://github.com/adafruit/Adafruit_PM25AQI](https://github.com/adafruit/Adafruit_PM25AQI)
+    * Adafruit SHT4x [https://github.com/adafruit/Adafruit_SHT4X](https://github.com/adafruit/Adafruit_SHT4X)
+    * Wifi (Native in library)
+    * Adafruit_Sensor [https://github.com/adafruit/Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)
+    * I2C control [https://github.com/Sensirion/arduino-i2c-scd4x](https://github.com/Sensirion/arduino-i2c-scd4x)
 
 If ESP32 isn't downloaded underneath the board manager, download it. 
 Once ESP32 is downloaded, select it within board manager and use version WHAT VERSION
@@ -67,7 +71,7 @@ Leave the rest as default if that setting was not already the default mode
 
 ## Cloning the file structure
 
-Next, clone the github REPO (LINK,LINK,LINK) into Arduino. 
+Next, clone the [Github respository](https://github.com/NCAR/esp32-atomlite-arduino-base) into Arduino. 
 Alternatively, click this link and download the zip of the file structure. 
 There should be code, a data directory, and within the data directory, a config.json
 

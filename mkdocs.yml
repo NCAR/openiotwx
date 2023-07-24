@@ -24,7 +24,6 @@ nav:
     - Power and Internet: 'assemble/connection.md'
     - Testing: "assemble/testing.md"
     - Core Unit: "assemble/core.md"
-    - Accessory Node Addition: "assemble/accessory_assemble.md"
   - Deploy: #Include calibration?
     - Field Deployment: "deploying/field_deployment.md"
     - Urban Deployment: "deploying/home_deployment.md"
