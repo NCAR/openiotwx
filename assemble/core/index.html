@@ -672,15 +672,76 @@
 
 
 <h1 id="assembling-the-main-unit">Assembling the Main Unit</h1>
-<p>Once you have made sure that the sensors are all functional and uploading data, assemble the station.</p>
-<p>Print all components that are necessary. The microcontroller and primary wiring center are housed in the spherical housing.</p>
-<p>Atmospheric sensors are housed in the radiation shield, UV in the 'UV tube' and 'UV cap', the rain gauge is removed from its original mount and transferred onto a threaded base, and the air quality sensor is housed in the 'AQ' system.</p>
-<p>The Hydreon RG15 rain sensor is separated from its original base by removing the four attached Phillips head screws. From there connect a GPIO to Grove wire-set to the pins on the RG15 circuit. Red-5v Black-Ground Yellow-in White-out. </p>
-<p>As the RG15 relies on UART for communication, this connection will monopolize the microcontrollers port.</p>
-<p>Because of this, the user must also attach a GPIO to qwiic connect setup on pins 21 and 25 of the microcontroller.That qwiic is then attached to a four way qwiic splitter. </p>
-<p>One is connected to the UV, another is attached to the Air Quality sensor (PMSA003I), another is attached to the BME680 atmospheric sensor. If the user wishes to attach more qwiic I2C sensors, they can either be daisy chained to these listed sensors or connected to another splitter. We have yet to reach an upper bound on these qwiic I2C connections.</p>
-<p>First, wire up the entire system, connect it to a power source and wireless signal, and run diagnostics to make sure data is being received by other clients. Once that is complete, place each sensor in its respective housing and attach all components.</p>
-<p>From there, all the user must do is mount in their preferred location. For the measurements to be usable on a scale outside of a personal use case (usable in climate models), this must be 1.5-2 meters off the ground, in a representative area compared to the surrounding environment, and isolated from buildings. </p>
+<p><strong>Components:</strong></p>
+<ol>
+<li><strong>Spherical Housing:</strong></li>
+<li>
+<p>Contains the microcontroller and primary wiring center.</p>
+</li>
+<li>
+<p><strong>Radiation Shield:</strong></p>
+</li>
+<li>
+<p>Houses atmospheric sensor (BME680).</p>
+</li>
+<li>
+<p><strong>UV Tube and UV Cap:</strong></p>
+</li>
+<li>Contains LTR390.</li>
+<li>
+<p>Is a non-threaded 1in housing such that it can sit separate (in a T) from the orb, so UV isn't
+   obstructed.</p>
+</li>
+<li>
+<p><strong>AQ (Air Quality) :</strong></p>
+</li>
+<li>Contains the PMSA003I.</li>
+<li>
+<p>Made of three component, a base (sensor is placed there), a vented lid fastened to the base,
+   and an impermeable cap (for sensor protection)</p>
+</li>
+<li>
+<p><strong>Hydreon RG15 Rain Sensor:</strong></p>
+</li>
+<li>Separate it from its base by removing the four Phillips head screws.</li>
+<li>
+<p>Connect it to the microcontroller using GPIO to Grove wire-set with the following connections:</p>
+<ul>
+<li>Red: 5V</li>
+<li>Black: Ground</li>
+<li>Yellow: Input</li>
+<li>White: Output</li>
+<li>Attach the threaded, printed, base that you printed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Qwiic Connection:</strong></p>
+</li>
+<li>The RG15 monopolizes the Grove port, and the type of connection that port uses.</li>
+<li>To integrate Qwiic, attach a GPIO to qwiic jumper on ground, 5v, pin 21, and pin 25 of the microcontroller.</li>
+<li>
+<p>Connect a four-way qwiic splitter to this qwiic setup.</p>
+</li>
+<li>
+<p><strong>Other Sensors:</strong></p>
+</li>
+<li>Qwiic compatible, I2C, sensors can be daisy-chained or connected to another splitter if needed.</li>
+</ol>
+<p><strong>Assembly:</strong></p>
+<ol>
+<li>
+<p>Wire up the entire system and connect it to a power source and wireless signal.</p>
+</li>
+<li>
+<p>Run diagnostics through CHORDS to ensure data is being received by clients.</p>
+</li>
+<li>
+<p>Place each sensor in its respective housing and reattach all components.</p>
+</li>
+<li>
+<p>Mount the sensor station at a height of 1.5-2 meters off the ground, in a representative area compared to the surrounding environment, and isolated from buildings for accurate measurements more suitable in use for climate models.</p>
+</li>
+</ol>
 <p><img alt="wiring" src="../../img/electronic_layout.png" /></p>
 
 
