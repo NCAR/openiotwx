@@ -11,16 +11,8 @@ For PoE we suggest integrating via an m5 microcontroller integration. What PoE d
 
 ## Internet Options
 
-The methodology we have developed for remote stations is threefold.
+The methodology we have in use for remote stations is three pronged.
 
-If there is service via a cellular network i.e T-mobile, Verizon, AT&T, etc. 
-purchase a sim card with a long lifespan and a relatively small amount of data (we use 200mb for a year).
-Additionally purchase a USB modem.
-With these two options you can run a miniaturized wireless network that integrates perfectly with the ESP32 microcontroller and data protocol.
-
-If there isn't cell service, you can either store data locally and retrieve it - cheaper and more time-consuming - or set up a satellite network
- - significantly more expensive but easier.
-
-### Note
-
- All of these options are listed within materials for you to choose what works best for you. If you choose PoE there are a few changes to the config.json - noted in the installation section.
+1. If there is service via a cellular network i.e T-mobile, Verizon, AT&T, etc. purchase a sim card with a long lifespan and a relatively small amount of data (we use 200mb for a year).Additionally purchase a USB modem. With these two options you can run a miniaturized wireless network that integrates perfectly with the ESP32 microcontroller and the MQTTdata protocol.
+2. If there isn't cell service and funds are tight you can either store data locally and retrieve it - time-consuming
+3. If there isn't cell service and there are available monies, set up a satellite network - significantly more expensive but easier.

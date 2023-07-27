@@ -10,6 +10,8 @@ or send a comment to us via our [Contribution](../contribution.md) portal.
 
 ## Printing Gear
 
+Only one roll of filament is required.
+
 |Area|Component|Price Per Unit|Number of Units|Total Price|Source|
 |---|---|---|---|---|---|
 |Printing|Ender 3 S1|$349.00|1|$349.00|[(Amazon)](https://www.amazon.com/Creality-S1-Extruder-Mainboard-8-6X8-6X10-6in/dp/B07DYL9B2S/ref=sr_1_3?crid=141O1QGAM9D88&keywords=ender+3+s1&qid=1678391179&sprefix=%2Caps%2C130&sr=8-3)|
@@ -18,6 +20,7 @@ or send a comment to us via our [Contribution](../contribution.md) portal.
 
 ## Base Station with Independent Comms and Power
 
+Only one solar panel and one battery are needed.
 
 |Area|Component|Price Per Unit|Number of Units|Total Price|Source|
 |---|---|---|---|---|---|
