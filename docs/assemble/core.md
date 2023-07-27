@@ -3,38 +3,43 @@
 **Components:**
 
 1. **Spherical Housing:**
-   - Contains the microcontroller and primary wiring center.
+     - Contains the microcontroller and primary wiring center.
+
 
 2. **Radiation Shield:**
-   - Houses atmospheric sensor (BME680).
+     - Contains the atmospheric sensor (BME680).
+
 
 3. **UV Tube and UV Cap:**
-   - Contains LTR390.
-   - Is a non-threaded 1in housing such that it can sit separate (in a T) from the orb, so UV isn't
+     - Contains the LTR390.
+     - Is a non-threaded 1in housing such that it can sit separate (in a T) from the orb, so UV isn't
    obstructed.
 
+
 5. **AQ (Air Quality) :**
-   - Contains the PMSA003I.
-   - Made of three component, a base (sensor is placed there), a vented lid fastened to the base,
+     - Contains the PMSA003I.
+     - Made of three component, a base (sensor is placed there), a vented lid fastened to the base,
    and an impermeable cap (for sensor protection)
 
 
 6. **Hydreon RG15 Rain Sensor:**
-   - Separate it from its base by removing the four Phillips head screws.
-   - Connect it to the microcontroller using GPIO to Grove wire-set with the following connections:
-     - Red: 5V
-     - Black: Ground
-     - Yellow: Input
-     - White: Output
-    - Attach the threaded, printed, base that you printed.
+     - Separate it from its base by removing the four Phillips head screws.
+     - Connect it to the microcontroller using GPIO to Grove wire-set with the following connections:
+       - Red: 5V
+       - Black: Ground
+       - Yellow: Input
+       - White: Output
+      - Attach the threaded, printed, base that you printed.
+
 
 7. **Qwiic Connection:**
-   - The RG15 monopolizes the Grove port, and the type of connection that port uses.
-   - To integrate Qwiic, attach a GPIO to qwiic jumper on ground, 5v, pin 21, and pin 25 of the microcontroller.
-   - Connect a four-way qwiic splitter to this qwiic setup.
+     - The RG15 monopolizes the Grove port, and the type of connection that port uses.
+     - To integrate Qwiic, attach a GPIO to qwiic jumper on ground, 5v, pin 21, and pin 25 of the microcontroller.
+     - Connect a four-way qwiic splitter to this qwiic setup.
+
 
 8. **Other Sensors:**
-   - Qwiic compatible, I2C, sensors can be daisy-chained or connected to another splitter if needed.
+     - Qwiic compatible, I2C, sensors can be daisy-chained or connected to another splitter if needed.
 
 **Assembly:**
 
