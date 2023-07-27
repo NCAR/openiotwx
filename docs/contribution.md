@@ -5,7 +5,7 @@ that you produce (if you're willing to share), but also support for new sensors,
 parts, and any feedback you have.
 
 This [google form](https://forms.gle/mJmh5QLR8TvUpvbg8) is the best way to contribute non-code items. 
-For code, stls, etc. please send pull requests for this repo(LINK,LINK,LINK)
+For code, stls, more in depth-issues, etc. please send pull requests or submit issues to this repo(Insert Umbrella Repo)
 
 Pieces we would love for you to contribute:
 

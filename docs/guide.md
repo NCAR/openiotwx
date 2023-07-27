@@ -21,5 +21,5 @@ modem.
 the 3d-printed assembly.
 9. [Assemble](assemble/core.md) your station. Put all the pieces together and give it a quick test 
 before putting it in the field.
-10. [Deploy](deploying/core_deploy.md) your station. Follow the steps for choosing a proper site and 
+10. [Deploy](deploying/home_deployment.md) your station. Follow the steps for choosing a proper site and 
 put your new weather station out in the field.

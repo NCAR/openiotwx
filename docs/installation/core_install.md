@@ -53,7 +53,7 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
     * I2C control [https://github.com/Sensirion/arduino-i2c-scd4x](https://github.com/Sensirion/arduino-i2c-scd4x)
 
 If ESP32 isn't downloaded underneath the board manager, download it. 
-Once ESP32 is downloaded, select it within board manager and use version WHAT VERSION
+Once ESP32 is downloaded, select it within board manager.
 When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module
 
 This will add a number of options underneath your tools section.
@@ -77,16 +77,16 @@ There should be code, a data directory, and within the data directory, a config.
 
 ## Editing Configuration Files
 
-Your microcontroller must contain a configuration file to operate.  The file contains information about WiFi connections, MQTT (the way your station will send data) connections and some other relevant information.
+Your microcontroller must contain a user-customized configuration file to operate.  The file contains information about Network Connection (WiFi), MQTT (the way your station will send data) connections and some other relevant information.
 
 
 The microntroller uses an [ESP32 SPIFFS filesystem](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html) to store the configuration. 
-In the folder that you will flash onto your mictrocontroller, you will find a `/data` folder which contains a `config.json` file.
+In the folder that you will flash onto your mictrocontroller using the sketch data upload interface, you will find a `/data` folder which contains a `config.json` file. This config allows for identification and choice with upload destination.
 
 
 ### Understanding the `config.json` file
 
-The typical config file  looks like this:
+A model config file looks something like this:
 
 ```json
 {    
@@ -98,8 +98,8 @@ The typical config file  looks like this:
     "iotwx_reset_interval":"360",
     "iotwx_sensor":"grove/i2c",
     "iotwx_timezone":"21600",
-    "iotwx_wifi_pwd":"",
-    "iotwx_wifi_ssid":"",
+    "iotwx_wifi_pwd":"PASSWORD",
+    "iotwx_wifi_ssid":"SSID",
     "iotwx_topic":"measurements/iotwx",
     "iotwx_max_frequency":"240"
 }
@@ -111,16 +111,16 @@ The details of each key are described below.
 | key | value / description |
 |:--:|:---|
 | `iotwx_local_config` | always set to "1" |
-| `iotwx_id` |  contains a _unique_ identifier for you station as a whole -- that is to say, if you have multiple nodes on the same _physical station_, they would share the same `iotwx_id`.  This identifier is also used in the data portal. (e.g. `"iotwx-co-bb83"`) |
+| `iotwx_id` |  contains a _unique_ identifier for you station as a whole.  This identifier is also used in the data portal. (e.g. `"iotwx-co-bb83"`) |
 | `iotwx_mq_ip` |  the ip address (e.g. `"172.88.0.13"`) of the MQTT broker you will be using.  At the moment only one such broker is allowed. You may use the FQDN (`"mymqttsite.wx"`) but the IP address uses less power by reducing the time WiFi is on to do DNS lookups. |
 | `iotwx_mq_port` |  the port number of the broker, which is typically `"1883"` for non-SSL and `"8883"` for SSL. |
-| `iotwx_publish_interval` |  the interval you wish your station to transmit in _minutes_.  Note this is relevant primarily for the Atmos node which continuously transmits at the specified interval. Hydro and Aero nodes only transmit when there is data to transmit. |
-| `iotwx_reset_interval`| the number of minutes between system resets.  The nodes are designed to reset every 6 hours or twice daily.  Reset is instantaneous and the system is restored to full functionality in 90 seconds after the Bluetooth acquisition phase. (e.g. `"1"` for 1 minute) |
-| `iotwx_sensor` | the sensor string for the node and may vary based on the node.  Typically do not change this value from what is contained in the default for your node. |
+| `iotwx_publish_interval` |  the interval you wish your station to transmit in _minutes_. Note: The stations only transmit when there is data to transmit. |
+| `iotwx_reset_interval`| Minutes between system resets.  The nodes are designed to reset every 6 hours or twice daily.  Reset is instantaneous and the system is restored to full functionality in 90 seconds after the Bluetooth acquisition phase. (e.g. `"1"` for 1 minute) |
+| `iotwx_sensor` | the sensor string for the node and may vary based on the node.  Typically do not change this value from what is contained in the default for your station. |
 | `iotwx_timezone` | the GMT offset in seconds of the station timezone. (e.g. `"21600"`)|
 | `iotwx_wifi_pwd` and `iotwx_wifi_ssid` | are the corresponding wifi password and ssid of the network your node will connect to.  Note, it is not necessary (but would be unusual) for all nodes to connect to the same WiFi network. (e.g. `"your_wifi"` and `"your_password"`)|
 | `iotwx_topic` | the MQTT topic your node will publish to.  It is not necessary for all nodes to publish to the same topic, but if you are using the CHORDS MQTT Orchestrator ([GitHub - NCAR/chords-mqtt-orchestrator](https://github.com/NCAR/chords-mqtt-orchestrator)), then you will need to adjust it accordingly to route your messages where they belong.  The current default is `"iotwx/net"`. |
-| `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run at frequencies up to 240, but has only been tested down 40 Mhz. Varying the value has power-saving benefits, where we have seen 20-50% reduction in power consumption of a node. |
+| `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run from 40-240Mhz. Varying the value has power-saving benefits - up to 50% reduction in total power consumption. |
 
 ## Flashing onto the microcontroller
 

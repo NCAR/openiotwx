@@ -11,3 +11,6 @@ Here are the steps to do that most effectively:
 5. Without plugging in the modem, connect your microcontroller, with sensors attached, to the power source. If it flashes blue, you're clear to proceed.
 6. Unplug the microcontroller, plug in the modem, wait a few seconds for your modem to connect, and plug in your microcontroller.
 7. Wait a few minutes and then check your data portal to see if you are receiving data. If so, you are good assemble the station.
+
+![full assembly](.././img/full_station.png)
+

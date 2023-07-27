@@ -24,7 +24,7 @@ nav:
     - Power and Internet: 'assemble/connection.md'
     - Testing: "assemble/testing.md"
     - Core Unit: "assemble/core.md"
-  - Deploy: #Include calibration?
+  - Deploy: 
     - Field Deployment: "deploying/field_deployment.md"
     - Urban Deployment: "deploying/home_deployment.md"
   - Data Management: "data_management.md"
@@ -36,7 +36,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - attr_list
+  - md_in_html
 
 extra_files:
   - print_files
+  - images
 
