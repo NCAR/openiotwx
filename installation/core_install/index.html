@@ -859,7 +859,7 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
 </li>
 </ul>
 <p>If ESP32 isn't downloaded underneath the board manager, download it. 
-Once ESP32 is downloaded, select it within board manager and use version WHAT VERSION
+Once ESP32 is downloaded, select it within board manager.
 When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module</p>
 <p>This will add a number of options underneath your tools section.
 Select:</p>
@@ -878,11 +878,11 @@ Select:</p>
 Alternatively, click this link and download the zip of the file structure. 
 There should be code, a data directory, and within the data directory, a config.json</p>
 <h2 id="editing-configuration-files">Editing Configuration Files</h2>
-<p>Your microcontroller must contain a configuration file to operate.  The file contains information about WiFi connections, MQTT (the way your station will send data) connections and some other relevant information.</p>
+<p>Your microcontroller must contain a user-customized configuration file to operate.  The file contains information about Network Connection (WiFi), MQTT (the way your station will send data) connections and some other relevant information.</p>
 <p>The microntroller uses an <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html">ESP32 SPIFFS filesystem</a> to store the configuration. 
-In the folder that you will flash onto your mictrocontroller, you will find a <code>/data</code> folder which contains a <code>config.json</code> file.</p>
+In the folder that you will flash onto your mictrocontroller using the sketch data upload interface, you will find a <code>/data</code> folder which contains a <code>config.json</code> file. This config allows for identification and choice with upload destination.</p>
 <h3 id="understanding-the-configjson-file">Understanding the <code>config.json</code> file</h3>
-<p>The typical config file  looks like this:</p>
+<p>A model config file looks something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w">    </span>
 <span class="w">    </span><span class="nt">&quot;iotwx_local_config&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;iotwx_id&quot;</span><span class="p">:</span><span class="s2">&quot;m5atom/esp32/aaffbbcc&quot;</span><span class="p">,</span>
@@ -892,8 +892,8 @@ In the folder that you will flash onto your mictrocontroller, you will find a <c
 <span class="w">    </span><span class="nt">&quot;iotwx_reset_interval&quot;</span><span class="p">:</span><span class="s2">&quot;360&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;iotwx_sensor&quot;</span><span class="p">:</span><span class="s2">&quot;grove/i2c&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;iotwx_timezone&quot;</span><span class="p">:</span><span class="s2">&quot;21600&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;iotwx_wifi_pwd&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;iotwx_wifi_ssid&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;iotwx_wifi_pwd&quot;</span><span class="p">:</span><span class="s2">&quot;PASSWORD&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;iotwx_wifi_ssid&quot;</span><span class="p">:</span><span class="s2">&quot;SSID&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;iotwx_topic&quot;</span><span class="p">:</span><span class="s2">&quot;measurements/iotwx&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;iotwx_max_frequency&quot;</span><span class="p">:</span><span class="s2">&quot;240&quot;</span>
 <span class="p">}</span>
@@ -913,7 +913,7 @@ In the folder that you will flash onto your mictrocontroller, you will find a <c
 </tr>
 <tr>
 <td align="center"><code>iotwx_id</code></td>
-<td align="left">contains a <em>unique</em> identifier for you station as a whole -- that is to say, if you have multiple nodes on the same <em>physical station</em>, they would share the same <code>iotwx_id</code>.  This identifier is also used in the data portal. (e.g. <code>"iotwx-co-bb83"</code>)</td>
+<td align="left">contains a <em>unique</em> identifier for you station as a whole.  This identifier is also used in the data portal. (e.g. <code>"iotwx-co-bb83"</code>)</td>
 </tr>
 <tr>
 <td align="center"><code>iotwx_mq_ip</code></td>
@@ -925,15 +925,15 @@ In the folder that you will flash onto your mictrocontroller, you will find a <c
 </tr>
 <tr>
 <td align="center"><code>iotwx_publish_interval</code></td>
-<td align="left">the interval you wish your station to transmit in <em>minutes</em>.  Note this is relevant primarily for the Atmos node which continuously transmits at the specified interval. Hydro and Aero nodes only transmit when there is data to transmit.</td>
+<td align="left">the interval you wish your station to transmit in <em>minutes</em>. Note: The stations only transmit when there is data to transmit.</td>
 </tr>
 <tr>
 <td align="center"><code>iotwx_reset_interval</code></td>
-<td align="left">the number of minutes between system resets.  The nodes are designed to reset every 6 hours or twice daily.  Reset is instantaneous and the system is restored to full functionality in 90 seconds after the Bluetooth acquisition phase. (e.g. <code>"1"</code> for 1 minute)</td>
+<td align="left">Minutes between system resets.  The nodes are designed to reset every 6 hours or twice daily.  Reset is instantaneous and the system is restored to full functionality in 90 seconds after the Bluetooth acquisition phase. (e.g. <code>"1"</code> for 1 minute)</td>
 </tr>
 <tr>
 <td align="center"><code>iotwx_sensor</code></td>
-<td align="left">the sensor string for the node and may vary based on the node.  Typically do not change this value from what is contained in the default for your node.</td>
+<td align="left">the sensor string for the node and may vary based on the node.  Typically do not change this value from what is contained in the default for your station.</td>
 </tr>
 <tr>
 <td align="center"><code>iotwx_timezone</code></td>
@@ -949,7 +949,7 @@ In the folder that you will flash onto your mictrocontroller, you will find a <c
 </tr>
 <tr>
 <td align="center"><code>iotwx_max_frequency</code></td>
-<td align="left">is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run at frequencies up to 240, but has only been tested down 40 Mhz. Varying the value has power-saving benefits, where we have seen 20-50% reduction in power consumption of a node.</td>
+<td align="left">is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run from 40-240Mhz. Varying the value has power-saving benefits - up to 50% reduction in total power consumption.</td>
 </tr>
 </tbody>
 </table>
