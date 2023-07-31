@@ -7,7 +7,6 @@ included every sensor that we currently support for the station within this list
 sensors you wish to include, we would be thrilled for you to modify the codebase and send us a pull request 
 or send a comment to us via our [Contribution](../contribution.md) portal.
 
-
 ## Printing Gear
 
 Only one roll of filament is required.
@@ -19,8 +18,6 @@ Only one roll of filament is required.
 |Printing|Tough PLA|$24.99|1|$24.99|[(Amazon)](https://www.amazon.com/Inland-Tough-Printer-Filament-1-75/dp/B09P497QP7/ref=sr_1_5?crid=1NRHG337K8J9S&keywords=tough+pla+white&qid=1678391347&sprefix=tough+pla+white%2Caps%2C136&sr=8-5)|
 
 ## Base Station with Independent Comms and Power
-
-Only one solar panel and one battery are needed.
 
 |Area|Component|Price Per Unit|Number of Units|Total Price|Source|
 |---|---|---|---|---|---|
@@ -40,9 +37,8 @@ Only one solar panel and one battery are needed.
 |Sensors|adafruit pm2.5|$44.95|1|$44.95|[(adafruit)](https://www.adafruit.com/product/4632)|
 |Sensors|adafruit ltr390|$4.95|1|$4.95|[(mouser)](https://www.mouser.com/ProductDetail/Adafruit/4831?qs=pBJMDPsKWf1zkcVjRyCEJQ%3D%3D)|
 |Power|voltaic v75 (20mah)|$79.00|1|$79.00|[(voltaic)](https://voltaicsystems.com/v75/)|
-|Power|voltaic v25 (6000mah)|$39.00|1|$39.00|[(voltaic)](https://voltaicsystems.com/v25/)|
 |Power|voltaic 20w solar panel|$99.00|1|$99.00|[(voltaic)](https://voltaicsystems.com/20-watt-6-volt-solar-panel-etfe/)|
-|Power|voltaic 10w solar panel|$65.00|1|$65.00|[(voltaic)](https://voltaicsystems.com/10-watt-panel-etfe/)|
+|Power|Junction Box|$15.93|1|$15.93|[Home Depot](https://www.homedepot.com/p/4-in-x-4-in-x-4-in-Junction-Box-R5133709/202043437)|
 |Communications|KuWfi 4G Hotspot|$36.99|1|$36.99|[(Amazon)](https://www.amazon.com/KuWFi-Internet-Devices-Portable-Hotspot/dp/B08NX14VQZ/ref=sr_1_3?crid=323OWE3N3VI67&keywords=usb+hotspot&qid=1678393361&sprefix=usb+hotspot%2Caps%2C105&sr=8-3)|
 |Communications|Redpocket 1 yr SIM (TMOBILE ONLY)|$30.00|1|$30.00|[(ebay)](https://www.ebay.com/itm/133196831828?hash=item1f03265c54:g:gXsAAOSww2Zfu-Xf)|
 
@@ -65,3 +61,16 @@ Only one solar panel and one battery are needed.
 |Sensors|RG-15 Rain Gauge|$99.00|1|$99.00|[(mouser)](https://www.mouser.com/ProductDetail/Seeed-Studio/114992321?qs=W%2FMpXkg%252BdQ4dWj25F6J2Gg%3D%3D)|
 |Sensors|adafruit pm2.5|$44.95|1|$44.95|[(adafruit)](https://www.adafruit.com/product/4632)|
 |Sensors|adafruit ltr390|$4.95|1|$4.95|[(mouser)](https://www.mouser.com/ProductDetail/Adafruit/4831?qs=pBJMDPsKWf1zkcVjRyCEJQ%3D%3D)|
+
+## Optional Materials
+
+A note on optional materials. If you are hosting in a sunny place and running your station with a relatively low
+power configuration, you can use a smaller solar panel and battery (below). 
+Additionally, for better print quality, a PEI plate can be quite nice, although not necessary by any means.
+
+|Area|Component|Price Per Unit|Number of Units|Total Price|Source|
+|---|---|---|---|---|---|
+|Power|voltaic 10w solar panel|$65.00|1|$65.00|[(voltaic)](https://voltaicsystems.com/10-watt-panel-etfe/)|
+|Power|voltaic v25 (6000mah)|$39.00|1|$39.00|[(voltaic)](https://voltaicsystems.com/v25/)|
+| Printing | PEI Magnetic Flexible Heated Bed Plate | $25.99 | 1 | $25.99 | [Amazon](https://www.amazon.com/Magnetic-Flexible-Heated-235x235mm-Ender/dp/B09F6Q4CYM?th=1)|
+
