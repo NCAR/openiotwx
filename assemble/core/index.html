@@ -530,9 +530,61 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Core Unit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Core Unit
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#charging-assembly" class="md-nav__link">
+    Charging Assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rain-gauge-and-air-quality-integration" class="md-nav__link">
+    Rain Gauge and Air Quality Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-rg15-and-aq-with-base" class="md-nav__link">
+    Integrating RG15 and AQ with Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#station-assembly" class="md-nav__link">
+    Station Assembly
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -658,6 +710,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#charging-assembly" class="md-nav__link">
+    Charging Assembly
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rain-gauge-and-air-quality-integration" class="md-nav__link">
+    Rain Gauge and Air Quality Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-rg15-and-aq-with-base" class="md-nav__link">
+    Integrating RG15 and AQ with Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#station-assembly" class="md-nav__link">
+    Station Assembly
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -674,37 +762,97 @@
 <h1 id="assembling-the-main-unit">Assembling the Main Unit</h1>
 <p><strong>Components:</strong></p>
 <ol>
-<li>
-<p><strong>Spherical Housing:</strong></p>
-<ul>
+<li><strong>Spherical Housing:</strong><ul>
 <li>Contains the microcontroller and primary wiring center.</li>
 </ul>
 </li>
-<li>
-<p><strong>Radiation Shield:</strong></p>
-<ul>
+</ol>
+<table>
+<thead>
+<tr>
+<th>wiring</th>
+<th>Side</th>
+<th>Front</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="I2C wiring" src="../../build_img/I2C_wiring.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="I2C side" src="../../build_img/I2C_side.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="I2C front" src="../../build_img/I2C_front.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>Radiation Shield:</strong><ul>
 <li>Contains the atmospheric sensor (BME680).</li>
 </ul>
 </li>
-<li>
-<p><strong>UV Tube and UV Cap:</strong></p>
-<ul>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="radiation parts" src="../../build_img/radiation_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="radiation built" src="../../build_img/radiation_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>UV Tube and UV Cap:</strong><ul>
 <li>Contains the LTR390.</li>
 <li>Is a non-threaded 1in housing such that it can sit separate (in a T) from the orb, so UV isn't
    obstructed.</li>
 </ul>
 </li>
-<li>
-<p><strong>AQ (Air Quality) :</strong></p>
-<ul>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Process</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="uv parts" src="../../build_img/uv_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="uv process" src="../../build_img/uv_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="uv complete" src="../../build_img/uv_complete.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>AQ (Air Quality) :</strong><ul>
 <li>Contains the PMSA003I.</li>
 <li>Made of three component, a base (sensor is placed there), a vented lid fastened to the base,
    and an impermeable cap (for sensor protection)</li>
 </ul>
 </li>
-<li>
-<p><strong>Hydreon RG15 Rain Sensor:</strong></p>
-<ul>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Process</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="aq parts" src="../../build_img/aq_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="aq process" src="../../build_img/aq_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="aq built" src="../../build_img/aq_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><strong>Hydreon RG15 Rain Sensor:</strong><ul>
 <li>Separate it from its base by removing the four Phillips head screws.</li>
 <li>Connect it to the microcontroller using GPIO to Grove wire-set with the following connections:</li>
 <li>Red: 5V</li>
@@ -714,6 +862,26 @@
 <li>Attach the threaded, printed, base that you printed.</li>
 </ul>
 </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Deconstructed</th>
+<th>Wiring</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="rg parts" src="../../build_img/rg_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="rg deconstructed" src="../../build_img/rg_deconstructed.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="rg_wiring" src="../../build_img/rg_wiring.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="rg complete" src="../../build_img/rg_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<ol>
 <li>
 <p><strong>Qwiic Connection:</strong></p>
 <ul>
@@ -744,7 +912,70 @@
 <p>Mount the sensor station at a height of 1.5-2 meters off the ground, in a representative area compared to the surrounding environment, and isolated from buildings for accurate measurements more suitable in use for climate models.</p>
 </li>
 </ol>
-<p><img alt="wiring" src="../../img/electronic_layout.png" /></p>
+<h3 id="charging-assembly">Charging Assembly</h3>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="power parts" src="../../build_img/charging_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="power built" src="../../build_img/charging.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="rain-gauge-and-air-quality-integration">Rain Gauge and Air Quality Integration</h3>
+<table>
+<thead>
+<tr>
+<th>Part 1</th>
+<th>Part 2</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="part 1" src="../../build_img/rg_aq_process_0.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="part 2" src="../../build_img/rg_aq_process_1.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="complete" src="../../build_img/rg_aq_complete.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="integrating-rg15-and-aq-with-base">Integrating RG15 and AQ with Base</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Complete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="process" src="../../build_img/orb_rg_aq_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="complete" src="../../build_img/orb_rg_aq.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="station-assembly">Station Assembly</h3>
+<table>
+<thead>
+<tr>
+<th>Without PVC</th>
+<th>Without Power</th>
+<th>Full Station</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="No PVC" src="../../build_img/station_no_pvc.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="No Power" src="../../build_img/station_no_power.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td><img alt="Full" src="../../build_img/full_station.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
 
 
 

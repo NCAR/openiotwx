@@ -837,7 +837,7 @@ may use it by the <code>#include "IoTwx.h"</code> directive.</p>
 <p>First, download Arduino 1.8 - this is an old release but in order to use the correct data format, SPIFFS, you must use Arduino 1.8. Download Arduino 1.8.19 following this <a href="https://www.arduino.cc/en/Main/Software">link</a>. If this is changed in Arduino IDE, IoTWX will adapt accordingly. </p>
 <p>There are a few other steps you will need to complete:</p>
 <p>Next, download the following packages. The easiest way to do this is to follow the github links and click download as zip. 
-From there, in the ‘manage libraries’ functionality of Arduino, you can add a library from a .ZIP. Do this with all packages that aren't native in the Arduino IDE library set.</p>
+From there, in the ‘manage libraries’ functionality of Arduino (under sketch), you can add a library from a .ZIP. Do this with all packages that aren't native in the Arduino IDE library set.</p>
 <ul>
 <li>install the required ESP32 Pico / M5 Stack Atom lite boards; a comprehensive instruction set is <a href="https://docs.m5stack.com/#/en/arduino/arduino_development">here</a></li>
 <li>install the <a href="https://github.com/me-no-dev/arduino-esp32fs-plugin">arduino-esp32fs-plugin</a> that will allow SPIFFS file uploads to ESP32 boards</li>
@@ -855,12 +855,13 @@ From there, in the ‘manage libraries’ functionality of Arduino, you can add 
 <li>Wifi (Native in library)</li>
 <li>Adafruit_Sensor <a href="https://github.com/adafruit/Adafruit_Sensor">https://github.com/adafruit/Adafruit_Sensor</a></li>
 <li>I2C control <a href="https://github.com/Sensirion/arduino-i2c-scd4x">https://github.com/Sensirion/arduino-i2c-scd4x</a></li>
+<li>The Custom IoTwx library
+If ESP32 isn't downloaded underneath the board manager, download it. 
+Once ESP32 is downloaded, select it within board manager.
+When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module</li>
 </ul>
 </li>
 </ul>
-<p>If ESP32 isn't downloaded underneath the board manager, download it. 
-Once ESP32 is downloaded, select it within board manager.
-When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module</p>
 <p>This will add a number of options underneath your tools section.
 Select:</p>
 <ul>
