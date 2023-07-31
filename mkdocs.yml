@@ -41,5 +41,4 @@ markdown_extensions:
 
 extra_files:
   - print_files
-  - images
 
