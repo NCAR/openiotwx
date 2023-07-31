@@ -7,6 +7,14 @@ parts, and any feedback you have.
 This [google form](https://forms.gle/mJmh5QLR8TvUpvbg8) is the best way to contribute non-code items. 
 For code, stls, more in depth-issues, etc. please send pull requests or submit issues to this repo(Insert Umbrella Repo)
 
+If you want to look further into this project, visit our various github repositories.
+
+* For general issues and contributions go [here](https://github.com/NCAR/openiotwx-hub)
+* For print issues and contribution go [here](https://github.com/NCAR/openiotwx-stl)
+* For suggestions about this site go [here](https://github.com/NCAR/openiotwx)
+* For issues and contributions to the flash code go [here](https://github.com/NCAR/esp32-atomlite-arduino-base)
+* For issues and contributions to the library code go [here](https://github.com/NCAR/esp32-atomlite-arduino-iotwx)
+
 Pieces we would love for you to contribute:
 
 * A housing and sensor system for measuring atmospheric pollutants

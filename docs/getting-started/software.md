@@ -1,7 +1,13 @@
 # Software
 
-First, download Arduino 1.8.18. This is an old release but in order to use the correct data 
-format, SPIFFS, you must use Arduino 1.8. If this is changed in Arduino IDE, 
+There are two softwares that will be necessary for all users. Arduino - to load, or flash, data onto the
+microcontroller, and a printing software. The printing software our team uses is Ultimaker Cura, if the
+printer you buy is incompatible with Cura, use whatever specific printing software your machine suggests.
+If you choose to use a different microcontroller system, you may also need a different flashing environment,
+but that is outside of the scope of this guide.
+
+First, download Arduino 1.8.18. This is a legacy release but in order to use the correct data 
+format, SPIFFS, you must use Arduino 1.8. SPIFFS has not yet been implemented in the 2.x version of Arduino. If this is changed in Arduino IDE, 
 IoTWX will adapt accordingly.
 
 Additionally you will need Ultimaker Cura (or a different 3d printing software)

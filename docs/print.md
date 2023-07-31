@@ -12,51 +12,55 @@ While we didn't feel it made sense to share gcodes for the various printing oper
 
 ## Base Unit
 
-### Housing options
 
-#### Orb Housing
+### Orb Housing
 ![Orb Housing](./img/Sphere_housing.png){: style="display: block; margin: 0 auto; width: 250px;"}
+![Orb Housing](./stl_pngs/Sphere_housing.png){: style="display: block; margin: 0 auto; width: 250px;"}
 - [Orb Housing STL File](./print_files/sphere_housing/Sphere_Housing.stl)
-
-#### Large Housing
-- [Large Housing STL File](./print_files/large_housing/large_housing.stl)
-
-#### Lid for Large Housing
-- [Lid for Large Housing STL File](./print_files/large_housing/large_Lid.stl)
 
 ### Base attachments
 
 #### Rain gauge
 ![RG15](./img/RG15.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![RG15](./stl_pngs/RG15.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Rain Gauge STL File](./print_files/rain_gauge/RG15_Housing.stl)
 
 #### UV tube
+![UV](./stl_pngs/UV_tube.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [UV tube STL File](./print_files/uv/UV_tube.stl)
 
 #### UV cap
-![UV](./img/UV.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![UV](./stl_pngs/UV_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [UV Cap STL File](./print_files/uv/UV_Cap.stl)
+![UV](./img/UV.png){: style="display: block; margin: 0 auto; width: 200px;"}
 
 #### Radiation shield
 ![Radiation](./img/Radiation.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![Radiation](./stl_pngs/Radiation_shield.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Radiation Shield STL File](./print_files/radiation_shield/Radiation_Shield.stl)
 
 #### Air quality body
 ![AQ Housing](./img/AQ_Housing.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![AQ Housing](./stl_pngs/AQ_housing.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Air quality body STL File](./print_files/air_quality/AQ_Housing_Male.stl)
 
 #### Air quality lid lock
 ![AQ Lid Lock](./img/AQ_lid_lock.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![AQ lid lock](./stl_pngs/AQ_lidlock.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Lock.stl)
 
 #### Air quality cap
 ![AQ cap](./img/AQ_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
+![AQ cap](./stl_pngs/AQ_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Air quality cap STL File](./print_files/air_quality/AQ_Cap.stl)
 
 ### Key Accessories
 
+![closed](./stl_pngs/closed_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Closed cap STL File](./print_files/caps/Cap_Closed.stl)
+![open](./stl_pngs/open_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Open cap STL File](./print_files/caps/Cap_Open.stl)
+![PVC Adapter](./stl_pngs/PVC_adapter.png){: style="display: block; margin: 0 auto; width: 200px;"}
 - [Threading to PVC adapter STL File](./print_files/caps/Adapter.stl)
 - [Vented Cap STL File](./print_files/caps/Cap_Vent.stl)
 
