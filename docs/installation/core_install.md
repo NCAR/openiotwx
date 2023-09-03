@@ -52,9 +52,10 @@ From there, in the ‘manage libraries’ functionality of Arduino (under sketch
     * Adafruit_Sensor [https://github.com/adafruit/Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)
     * I2C control [https://github.com/Sensirion/arduino-i2c-scd4x](https://github.com/Sensirion/arduino-i2c-scd4x)
     * The Custom IoTwx library
-If ESP32 isn't downloaded underneath the board manager, download it. 
-Once ESP32 is downloaded, select it within board manager.
-When selecting what board to use, under ESP32 Arduino choose ESP32 Dev Module
+
+If ESP32 isn't appearing underneath the board manager, download it (see previous steps). 
+Once ESP32 is downloaded, select it within board manager toolbar setting.
+When selecting what board to use, under ESP32 Arduino, choose 'ESP32 Dev Module'
 
 This will add a number of options underneath your tools section.
 Select:
