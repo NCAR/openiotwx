@@ -1,10 +1,18 @@
-# openiotwx
+# openIoTwx
 
-Repo hosting the openIoTwx project by NCAR. Currently a work in progress.
+Repo hosting the openIoTwx project by NCAR.
 
-The site is hosted at [https://ncar.github.io/openiotwx](https://ncar.github.io/openiotwx)
+This website is currently a work in progress and is live here:
 
-The umbrella repository, where various resources outside of the documentation are hosted, is 
-[here](https://github.com/NCAR/openiotwx-hub)
+* [https://ncar.github.io/openiotwx](https://ncar.github.io/openiotwx)
+
+
+If you are looking for the overarching openIoTwx Github repository (aka "openIoTwx Hub"), please go here:
+
+* openIoTwx Hub repository: [https://github.com/ncar/openiotwx-hub](https://github.com/ncar/openiotwx-hub)
+
+
+
+
 
 
