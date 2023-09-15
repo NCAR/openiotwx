@@ -11,6 +11,11 @@ If you are looking for the overarching openIoTwx Github repository (aka "openIoT
 
 * openIoTwx Hub repository: [https://github.com/ncar/openiotwx-hub](https://github.com/ncar/openiotwx-hub)
 
+# For Developers 
+
+If you wish to contribute to this project please understand how to build it first.
+
+The main development site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).  You can [learn how to install it](https://squidfunk.github.io/mkdocs-material/getting-started/) and then you will be able to begin contributing.
 
 
 
