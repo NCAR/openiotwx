@@ -29,6 +29,9 @@ communications and initialization functions of the station.
 
 First, download Arduino 1.8 - this is an old release but in order to use the correct data format, SPIFFS, you must use Arduino 1.8. Download Arduino 1.8.19 following this [link](https://www.arduino.cc/en/Main/Software). If this is changed in Arduino IDE, IoTWX will adapt accordingly. 
 
+Next, Underneath the boards manager, download the Espressif add the following URL to the list of Boards Manager list so that "ESP32 Dev" appears via File->Preferences->Additional Boards Manager URLs
+[https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json](https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json)
+
 There are a few other steps you will need to complete:
 
 Next, download the following packages. The easiest way to do this is to follow the github links and click download as zip. 
@@ -51,6 +54,9 @@ From there, in the ‘manage libraries’ functionality of Arduino (under sketch
     * Wifi (Native in library)
     * Adafruit_Sensor [https://github.com/adafruit/Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)
     * I2C control [https://github.com/Sensirion/arduino-i2c-scd4x](https://github.com/Sensirion/arduino-i2c-scd4x)
+    * DFRobot Ozone Sensor [https://github.com/DFRobot/DFRobot_OzoneSensor](https://github.com/DFRobot/DFRobot_OzoneSensor)
+    * Sensirion Core [https://github.com/Sensirion/arduino-core](https://github.com/Sensirion/arduino-core)
+    * M5 Ethernet [https://github.com/m5stack/M5-Ethernet](https://github.com/m5stack/M5-Ethernet)
     * The Custom IoTwx library
 
 If ESP32 isn't appearing underneath the board manager, download it (see previous steps). 
@@ -83,6 +89,8 @@ Your microcontroller must contain a user-customized configuration file to operat
 
 The microntroller uses an [ESP32 SPIFFS filesystem](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/spiffs.html) to store the configuration. 
 In the folder that you will flash onto your mictrocontroller using the sketch data upload interface, you will find a `/data` folder which contains a `config.json` file. This config allows for identification and choice with upload destination.
+
+If the data folder isn't appearing, don't worry. Just create a data folder in the Arduino sketch folder. Inside of that, put the json and contents in and it should work.
 
 
 ### Understanding the `config.json` file
@@ -131,5 +139,7 @@ Additionally, make sure to do an ESP32 Sketch Data Upload (under Tools). This wi
 ## Configuring data upload
 
 While this isn't necessarily under the direct purview of openIoTwx, and is more covered by whatever orchestrator and other clients you decide to use, it is worth noting that your topic in the config needs to then be matched and set up within your orchestrator and then in your data collection / visualization client (CHORDS for us).
+
+You can learn more about CHORDS at [http://chordsrt.com](http://chordsrt.com).
 
 
