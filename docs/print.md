@@ -40,19 +40,13 @@ While we didn't feel it made sense to share gcodes for the various printing oper
 - [Radiation Shield STL File](./print_files/radiation_shield/Radiation_Shield.stl)
 
 #### Air quality body
-![AQ Housing](./img/AQ_Housing.png){: style="display: block; margin: 0 auto; width: 200px;"}
-![AQ Housing](./stl_pngs/AQ_housing.png){: style="display: block; margin: 0 auto; width: 200px;"}
-- [Air quality body STL File](./print_files/air_quality/AQ_Housing_Male.stl)
+![AQ Housing](./stl_pngs/AQ_Housing.png){: style="display: block; margin: 0 auto; width: 200px;"}
+- [Air quality body STL File](./print_files/air_quality/AQ_Housing_Vented_Male.stl)
 
-#### Air quality lid lock
-![AQ Lid Lock](./img/AQ_lid_lock.png){: style="display: block; margin: 0 auto; width: 200px;"}
-![AQ lid lock](./stl_pngs/AQ_lidlock.png){: style="display: block; margin: 0 auto; width: 200px;"}
-- [Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Lock.stl)
+#### Air quality Cap
+![AQ lid lock](./stl_pngs/AQ_vent.png){: style="display: block; margin: 0 auto; width: 200px;"}
+- [Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Half_Vent.stl)
 
-#### Air quality cap
-![AQ cap](./img/AQ_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
-![AQ cap](./stl_pngs/AQ_cap.png){: style="display: block; margin: 0 auto; width: 200px;"}
-- [Air quality cap STL File](./print_files/air_quality/AQ_Cap.stl)
 
 ### Key Accessories
 
