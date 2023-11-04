@@ -45,7 +45,7 @@ While we didn't feel it made sense to share gcodes for the various printing oper
 
 #### Air quality Cap
 ![AQ lid lock](./stl_pngs/AQ_vent.png){: style="display: block; margin: 0 auto; width: 200px;"}
-- [Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Half_Vent.stl)
+- [Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Half_Vented.stl)
 
 
 ### Key Accessories
