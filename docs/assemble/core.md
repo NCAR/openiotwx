@@ -5,9 +5,9 @@
 1. **Spherical Housing:**
      - Contains the microcontroller and primary wiring center.
 
-|wiring | Side | Front |
-| ---- | ---- | ---- |
-| ![I2C wiring](.././build_img/I2C_wiring.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![I2C side](.././build_img/I2C_side.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![I2C front](.././build_img/I2C_front.jpg){: style="display: block; margin: 0 auto; width: 250px;"} |
+|wiring | Side | Front | Detail |
+| ---- | ---- | ---- | ---- |
+| ![I2C wiring](.././build_img/I2C_wiring.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![I2C side](.././build_img/I2C_side.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![I2C front](.././build_img/I2C_front.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![I2C detail](.././build_detail.jpg){: style="display: block; margin: 0 auto; width: 250px;"} |
 
 2. **Radiation Shield:**
      - Contains the atmospheric sensor (BME680).
@@ -43,9 +43,9 @@
        - White: Output
       - Attach the threaded, printed, base that you printed.
 
-| Parts | Deconstructed | Wiring | Complete |
-| ------ | ------ | ------ | ------ |
-| ![rg parts](.././build_img/rg_parts.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg deconstructed](.././build_img/rg_deconstructed.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg_wiring](.././build_img/rg_wiring.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg complete](.././build_img/rg_built.jpg){: style="display: block; margin: 0 auto; width: 250px;"} |
+| Parts | Deconstructed | Wiring | Details | Complete |
+| ------ | ------ | ------ | ------ | ------ |
+| ![rg parts](.././build_img/rg_parts.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg deconstructed](.././build_img/rg_deconstructed.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg_wiring](.././build_img/rg_wiring.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg wiring detail](.././build_img/rg_wiring_detail.jpg){: style="display: block; margin: 0 auto; width: 250px;"} | ![rg complete](.././build_img/rg_built.jpg){: style="display: block; margin: 0 auto; width: 250px;"} |
 
 7. **Qwiic Connection:**
      - The RG15 monopolizes the Grove port, and the type of connection that port uses.
