@@ -7,6 +7,8 @@ included every sensor that we currently support for the station within this list
 sensors you wish to include, we would be thrilled for you to modify the codebase and send us a pull request 
 or send a comment to us via our [Contribution](../contribution.md) portal.
 
+The station can be powered and connected via ethernet or independently. The materials needed will be different depending on which configuration you use. Pay attention to the headings on the table below to make sure the materials you purchase are appropriate for the configuration that meets your needs. If you need more information to decide which configuration is best for your specific circumstance, go to the [Determining Power & Internet Needs](../getting-started/connection.md) page.
+
 ## Printing Gear
 
 Only one roll of filament is required.
