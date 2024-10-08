@@ -6,3 +6,5 @@ Properly situating a weather station in the field requires careful consideration
 * Mount the station at a suitable height, typically 1.5 to 2 meters above the ground, for reliable data.
 
 ![Deployment Example 1](../deployment_images/deployment_1.png){style="display: block; margin: 0 auto; width: 400px;"}
+
+![Deployment Example 2](../deployment_images/deployment2.jpg){style="display: block; margin: 0 auto; width: 400px;"}

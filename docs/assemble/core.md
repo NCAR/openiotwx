@@ -24,7 +24,7 @@ The instructions on this page are to assemble a basic model of the IoT weather s
 
      |Instructions | Image|
      | ------ | ------ |
-     |Unplug the air quality sensor from the Qwiic connector, but leave the cord connected to the sensor.|![](){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Unplug the air quality sensor from the Qwiic connector, but leave the cord connected to the sensor.|![AQ Sensor Wired](../assembly_imgs/Air_quality_sensor_wired.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Find the fan on the sensor (looks like a small black box). Feed the air quality wiring through the vented base and make sure the fan is facing towards the bottom of the housing (Look for the gap/lip at the bottom of the vented lid). |![AQ Orientation](../assembly_imgs/AQ_orientation.png){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Twist on the vented lid. You should be able to see the fan at the bottom of the housing. NOTE: It may be a little difficult to twist on the vented lid. You may need to snap it into place. |![Finished Air Quality Housing](../assembly_imgs/AQ_housing.png){: style="display: block; margin: 0 auto; width: 200px;"}|
 
@@ -36,8 +36,9 @@ The instructions on this page are to assemble a basic model of the IoT weather s
 
      |Instructions | Image|
      | ------ | ------ |
-     |Screw the vented cap onto the bottom of the radiation shield. |![Vented Cap of Radiation Shield](../assembly_imgs/BME_housing.png){: style="display: block; margin: 0 auto; width: 200px;"}|
-     |Gently place the temperature, humidity, and air pressure sensor (BME 680) into the radiation shield with the wires sticking out from the top opening. | ![radiation built](.././build_img/radiation_built.jpg){: style="display: block; margin: 0 auto; width: 200px;"} |
+     |Unplug the BME680 sensor from the Qwiic connector, but leave the cord connected to the sensor.|![BME680 Sensor Wired](../assembly_imgs/BME_680_wired.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Screw the vented cap onto the bottom of the radiation shield. |![Vented Cap of Radiation Shield](../assembly_imgs/Radiation_shield_close_up.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Gently place the temperature, humidity, and air pressure sensor (BME 680) into the radiation shield with the wires sticking out from the top opening. | ![radiation built](../assembly_imgs/BME_680_in_radiation_shield.jpeg){: style="display: block; margin: 0 auto; width: 200px;"} |
 
 
 4. **UV Sensor Housing**
@@ -48,11 +49,13 @@ The instructions on this page are to assemble a basic model of the IoT weather s
 
      |Instructions | Image|
      | ------ | ------ |
-     |Unplug the UV sensor from the Qwiic connection port, but leave it wired to the sensor. Position the sensor in the UV cap so that the sensor-side is visible through the cap’s hole.|![](){: style="display: block; margin: 0 auto; width: 200px;"}|
-     |Thread the sensor wires through the UV base and screw the base onto the UV cap. The sensor should feel very secure even when you tug on the wire. Double-check that the sensor-side of the UV sensor is visible from the top of the cap. |![](){: style="display: block; margin: 0 auto; width: 200px;"}|
-     |Thread the UV sensor wire through the top of the PVC T-pipe joint and through either side. Then, fit the UV base and cap onto the top of the PVC T-pipe joint. |![UV in PVC Joint](../assembly_imgs/UV_T_pipe.png){: style="display: block; margin: 0 auto; width: 200px;"}|
-     |Attach the shortest PVC pipe to the PVC T-pipe joint and thread the wire through.|![UV with PVC Attached](../assembly_imgs/UV_PVC.png){: style="display: block; margin: 0 auto; width: 200px;"}|
-     |Attach the final UV sensor 3D printed piece, which is the threaded attachment piece, to the end of the short PVC pipe (find in Print/Key Accessories).|![](){: style="display: block; margin: 0 auto; width: 300px;"}|
+     |Unplug the UV sensor from the Qwiic connection port, but leave it wired to the sensor.|![UV Sensor Wired](../assembly_imgs/UV_sensor_wired.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Position the sensor in the UV cap so that the sensor-side is visible through the cap’s hole.|![UV Sensor in Housing Cap](../assembly_imgs/UV_sensor_in_housing_cap.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Thread the sensor wires through the UV base and screw the base onto the UV cap. |![Adding base to UV sensor](../assembly_imgs/UV_Sensor_in_housing.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |The sensor should feel very secure even when you tug on the wire. Double-check that the sensor-side of the UV sensor is visible from the top of the cap. |![UV sensor with base and cap](../assembly_imgs/UV_Sensor_housing_screwed_on.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Thread the UV sensor wire through the top of the PVC joint and out the side side. Then, fit the UV base and cap onto the top of the PVC joint. |![UV in PVC Joint](../assembly_imgs/UV_sensor_in_90_degree_pipe_alt_method.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Attach the shortest PVC pipe to the PVC joint and thread the wire through.|![UV with PVC Attached](../assembly_imgs/UV_sensor_in_90_degree_pipe_with_PVC.jpeg){: style="display: block; margin: 0 auto; width: 200px;"}|
+     |Attach the final UV sensor 3D printed piece, which is the threaded attachment piece, to the end of the short PVC pipe (find in Print/Key Accessories).|![UV full set up with adapter](../assembly_imgs/UV_sensor_in_T_pipe_with_PVC_and_adapter.jpeg){: style="display: block; margin: 0 auto; width: 300px;"}|
      |Remove any film covering the screen of the UV lens. Place the lens over the top of the UV sensor housing. If it does not stay in place, consider using hot glue or another adhesive to ensure it remains secured. |![UV Housing Fully Assembled](../assembly_imgs/UV_housing_final.png){: style="display: block; margin: 0 auto; width: 200px;"}|
 
 
@@ -92,7 +95,7 @@ Prior to starting the final assembly, ensure that the UV sensor, air quality sen
 
      |Instructions | Image|
      | ------ | ------ |
-     |Find the rain gauge connector and connect it into the microcontroller (look for white with 4 prongs). Then, connect the USB-C power to the microcontroller right below it.|![Microcontroller Ports](../assembly_imgs/microcontroller_wiring.png){: style="display: block; margin: 0 auto; width: 500px;"}|
+     |Find the rain gauge connector and connect it into the microcontroller (look for white with 4 prongs). Then, connect the USB-C power to the microcontroller right below it.|![Microcontroller Ports](../assembly_imgs/close_up_of_microcontroller.jpeg){: style="display: block; margin: 0 auto; width: 500px;"}|
      |Connect the remaining two wires (air quality sensor and UV sensor) to the Qwiic MultiPort. The side of the port does not matter as long as the connection is tight. Attach the last sensor (BME 680 for temperature, humidity, and air pressure) to the Qwiic connection and keep track of this sensor.|![Connect Wires](../assembly_imgs/wire_attachment.png){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Push all the sensors into the orb housing, except for the BME 680 sensor. Leave the BME 680 sensor outside the orb housing temporarily. |![Insert Wiring into Orb](../assembly_imgs/insert_wiring.png){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Secure the radiation shield by place the BME 680 sensor inside the shield and screwing the shield to the bottom of the orb housing.|![Attach Radiation Shield](../assembly_imgs/BME680_attachment.png){: style="display: block; margin: 0 auto; width: 200px;"}|

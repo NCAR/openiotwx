@@ -9,3 +9,4 @@ When deploying a weather station at a home, school, or in an otherwise developed
 
 ![Deployment Example 1](../deployment_images/deployment_1.png){style="display: block; margin: 0 auto; width: 400px;"}
 
+![Deployment Example 2](../deployment_images/deployment2.jpg){style="display: block; margin: 0 auto; width: 400px;"}

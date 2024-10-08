@@ -22,6 +22,7 @@ nav:
   - Install:
     - Flash: "installation/core_install.md"
   - Assemble:
+    - Video Tutorials: "assemble/tutorial.md"
     - Testing: "assemble/testing.md"
     - Core Unit: "assemble/core.md"
     - Independent Power  : "assemble/independent.md"
