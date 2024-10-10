@@ -15,15 +15,18 @@ nav:
     - Ideals: "introduction/ideals.md"
   - Getting Started:
     - Materials list: "getting-started/materials.md"
+    - Determining power & internet needs: 'getting-started/connection.md'
     - Computing needs: "getting-started/computing.md"
     - Software tools: "getting-started/software.md"
   - Print: "print.md"
   - Install:
     - Flash: "installation/core_install.md"
   - Assemble:
-    - Power and Internet: 'assemble/connection.md'
+    - Video Tutorials: "assemble/tutorial.md"
     - Testing: "assemble/testing.md"
     - Core Unit: "assemble/core.md"
+    - Independent Power  : "assemble/independent.md"
+    - Power over Ethernet : "assemble/ethernet.md"
   - Deploy: 
     - Field Deployment: "deploying/field_deployment.md"
     - Urban Deployment: "deploying/home_deployment.md"
