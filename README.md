@@ -13,11 +13,16 @@ If you are looking for the overarching openIoTwx Github repository (aka "openIoT
 
 # For Developers 
 
-If you wish to contribute to this project please understand how to build it first.
+We welcome contributions, so if you wish to contribute to this project please understand how to build it first.
 
 The main development site uses [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).  You can [learn how to install it](https://squidfunk.github.io/mkdocs-material/getting-started/) and then you will be able to begin contributing.
 
+The best way to work on this is to:
 
+* fork the repo
+* make a branch to work on revisions
+* test locally using `mkdocs serve` (you will need to install mkdocs according to the documentation) 
+* submit a Pull Request
 
 
 
