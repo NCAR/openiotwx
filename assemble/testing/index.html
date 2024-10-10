@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../connection/">
+        <link rel="prev" href="../tutorial/">
       
       
         <link rel="next" href="../core/">
@@ -435,6 +435,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../getting-started/connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Determining power & internet needs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../getting-started/computing/" class="md-nav__link">
         
   
@@ -604,11 +625,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../connection/" class="md-nav__link">
+      <a href="../tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Power and Internet
+    Video Tutorials
   </span>
   
 
@@ -634,6 +655,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -643,6 +675,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-sensor-and-power-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller, Sensor, and Power Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wiring Diagram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -661,6 +730,48 @@
   
   <span class="md-ellipsis">
     Core Unit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../independent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independent Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ethernet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power over Ethernet
   </span>
   
 
@@ -821,6 +932,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-sensor-and-power-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller, Sensor, and Power Connections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiring-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wiring Diagram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -834,19 +971,77 @@
                   
 
 
-<h1 id="testing-your-station-before-deployment">Testing your Station before deployment</h1>
+<h1 id="testing-your-station-before-deployment">Testing your Station Before Deployment</h1>
 <p>Before you place all of your sensors into their various housing, it is important to test whether or not you are receiving data.</p>
 <p>Here are the steps to do that most effectively:</p>
 <ol>
 <li>Configure your wifi modem (if you are using a sim card setup)</li>
 <li>Plug the modem into your power source and check whether or not you have a signal.</li>
 <li>Unplug the modem and plug in your microcontroller, without any sensors attached. When connected to power, but not to sensors, it will blink red. </li>
-<li>Unplug the microcontroller from the power source and attach your cables. Make sure all Grove and Qwiic connectors are properly pushed into place as this can cause issues down the line.</li>
+<li>Unplug the microcontroller from the power source and attach all your sensors with the appropriate cables. See the Microcontroller, Sensor, and Power Connections table below for details. </li>
+<li>Make sure all Grove and Qwiic connectors are properly pushed into place as this can cause issues down the line.</li>
 <li>Without plugging in the modem, connect your microcontroller, with sensors attached, to the power source. If it flashes blue, you're clear to proceed.</li>
 <li>Unplug the microcontroller, plug in the modem, wait a few seconds for your modem to connect, and plug in your microcontroller.</li>
 <li>Wait a few minutes and then check your data portal to see if you are receiving data. If so, you are good assemble the station.</li>
 </ol>
-<p><img alt="full assembly" src="../../img/full_station.png" style="display: block; margin: 0 auto; width: 250px;" /></p>
+<h4 id="microcontroller-sensor-and-power-connections">Microcontroller, Sensor, and Power Connections</h4>
+<table>
+<thead>
+<tr>
+<th>Connecting Items</th>
+<th>Item 1 Image</th>
+<th>Wire</th>
+<th>Item 2 Image</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwiic MultiPort to BME680</td>
+<td><img alt="Qwiic MultiPort" src="../../sensor_pngs/multiport.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="100mm Qwiic Wire" src="../../sensor_pngs/100mm_qwiic.png" style="display: block; margin: 0 auto; width: 200px;" />100mm qwiic to qwiic wire</td>
+<td><img alt="BME680" src="../../sensor_pngs/BME680.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Qwiic MultiPort to Air Quality Sensor</td>
+<td><img alt="Qwiic MultiPort" src="../../sensor_pngs/multiport.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="200mm Qwiic Wire" src="../../sensor_pngs/200mm_qwiic.png" style="display: block; margin: 0 auto; width: 200px;" />200mm qwiic to qwiic wire</td>
+<td><img alt="Air Quality Sensor" src="../../sensor_pngs/AQ_sensor.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Qwiic MultiPort to UV Sensor</td>
+<td><img alt="Qwiic MultiPort" src="../../sensor_pngs/multiport.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="500mm Qwiic Wire" src="../../sensor_pngs/500mm_qwiic.png" style="display: block; margin: 0 auto; width: 200px;" />500mm qwiic to qwiic wire</td>
+<td><img alt="UV Sensor" src="../../sensor_pngs/LTR390.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Qwiic Multiport to Microcontroller</td>
+<td><img alt="Qwiic MultiPort" src="../../sensor_pngs/multiport.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="Qwiic to male GPIO wire" src="../../sensor_pngs/qwiic_maleGPIO.png" style="display: block; margin: 0 auto; width: 200px;" />qwiic to male GPIO wire</td>
+<td><img alt="Microcontroller" src="../../sensor_pngs/microcontroller.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="Microcontroller wiring" src="../../sensor_pngs/microcontroller_color_coded.png" style="display: block; margin: 0 auto; width: 100px;" />To integrate Qwiic, attach a GPIO to qwiic jumper on ground, 5v, pin 21, and pin 25 of the microcontroller. That is yellow, blue, red, black from top to bottom on the right.</td>
+</tr>
+<tr>
+<td>Microcontroller to Rain Gauge</td>
+<td><img alt="Microcontroller" src="../../sensor_pngs/microcontroller.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="Grove to female GPIO wire" src="../../sensor_pngs/grove_femaleGPIO.png" style="display: block; margin: 0 auto; width: 200px;" />grove to female GPIO wire</td>
+<td><img alt="Rain Gauge" src="../../sensor_pngs/RG.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td><img alt="Rain Gauge Wiring" src="../../sensor_pngs/RG_color_coded.png" style="display: block; margin: 0 auto; width: 150px;" />Unscrew the base from the rain gauge. Connect the female GPIO wires as indicated. Red (5v, top left), Black(ground, bottom left), Yellow (Input, 2nd from top left), White (Output, 3rd from bottom left).</td>
+</tr>
+<tr>
+<td>Microcontroller to Power</td>
+<td><img alt="Microcontroller" src="../../sensor_pngs/microcontroller.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+<td>USB-C to any power source</td>
+<td>Power Source</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="wiring-diagram">Wiring Diagram</h4>
+<p><img alt="wiring diagram" src="../../sensor_pngs/wiring_diagram.png" style="display: block; margin: 0 auto; width: 400px;" /></p>
 
 
 

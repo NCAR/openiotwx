@@ -12,7 +12,7 @@
         <link rel="prev" href="../testing/">
       
       
-        <link rel="next" href="../../deploying/field_deployment/">
+        <link rel="next" href="../independent/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -435,6 +435,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../getting-started/connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Determining power & internet needs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../getting-started/computing/" class="md-nav__link">
         
   
@@ -604,11 +625,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../connection/" class="md-nav__link">
+      <a href="../tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Power and Internet
+    Video Tutorials
   </span>
   
 
@@ -692,36 +713,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#charging-assembly" class="md-nav__link">
+  <a href="#housing-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Charging Assembly
+      Housing Assembly
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rain-gauge-and-air-quality-integration" class="md-nav__link">
+  <a href="#final-assembly-for-base-unit" class="md-nav__link">
     <span class="md-ellipsis">
-      Rain Gauge and Air Quality Integration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrating-rg15-and-aq-with-base" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integrating RG15 and AQ with Base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#station-assembly" class="md-nav__link">
-    <span class="md-ellipsis">
-      Station Assembly
+      Final Assembly for Base Unit
     </span>
   </a>
   
@@ -731,6 +734,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../independent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independent Power
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ethernet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Power over Ethernet
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -894,36 +939,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#charging-assembly" class="md-nav__link">
+  <a href="#housing-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      Charging Assembly
+      Housing Assembly
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rain-gauge-and-air-quality-integration" class="md-nav__link">
+  <a href="#final-assembly-for-base-unit" class="md-nav__link">
     <span class="md-ellipsis">
-      Rain Gauge and Air Quality Integration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrating-rg15-and-aq-with-base" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integrating RG15 and AQ with Base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#station-assembly" class="md-nav__link">
-    <span class="md-ellipsis">
-      Station Assembly
+      Final Assembly for Base Unit
     </span>
   </a>
   
@@ -945,226 +972,304 @@
 
 
 <h1 id="assembling-the-main-unit">Assembling the Main Unit</h1>
-<p><strong>Components:</strong></p>
+<p>At this point you should have confirmed your sensors, wiring, microcontroller, connection, and power source are functional. Now we will disconnect the wiring we put together for testing so that we may get each component into its housing, then fit all the housing together.</p>
+<p>The instructions on this page are to assemble a basic model of the IoT weather station with four sensors: rain gauge, air quality, temperature/pressure/humidity, and UV. We encourage you to explore and iterate on this design once you understand the principle structure. If you would like to add more sensors, any Qwiic compatible, I2C, sensors can be daisy-chained or connected to another splitter if needed.</p>
+<h2 id="housing-assembly">Housing Assembly</h2>
 <ol>
-<li><strong>Spherical Housing:</strong><ul>
-<li>Contains the microcontroller and primary wiring center.</li>
-</ul>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>wiring</th>
-<th>Side</th>
-<th>Front</th>
-<th>Detail</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="I2C wiring" src="../../build_img/I2C_wiring.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="I2C side" src="../../build_img/I2C_side.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="I2C front" src="../../build_img/I2C_front.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="I2C detail" src="../../build_img/I2C_detail.jpeg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><strong>Radiation Shield:</strong><ul>
-<li>Contains the atmospheric sensor (BME680).</li>
-</ul>
-</li>
-</ol>
+<li>
+<p><strong>Hydreon RG15 Rain Sensor</strong></p>
 <table>
 <thead>
 <tr>
 <th>Parts</th>
-<th>Complete</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="radiation parts" src="../../build_img/radiation_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="radiation built" src="../../build_img/radiation_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td>Rain gauge wired with GPIO to Grove cable<br>Screws from original rain gauge base</td>
+<td>3D printed rain gauge mount</td>
+<td>Screwdriver</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li><strong>UV Tube and UV Cap:</strong><ul>
-<li>Contains the LTR390.</li>
-<li>Is a non-threaded 1in housing such that it can sit separate (in a T) from the orb, so UV isn't
-   obstructed.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detach the rain gauge from the microcontroller by pinching down on the white tab (open the alligator mouth) and pulling it off.</td>
+<td><img alt="" src="" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Insert the cords through the center of the rain gauge base and align the base with the four screw holes in the board. Reattach the housing with the screws you removed from the manufacturer's base. Note: it is not required to keep the silica packet in. The purpose of the packet is to absorp water that may get into the sensor.</td>
+<td><img alt="rg complete" src="../../build_img/rg_built.jpg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
-</ol>
+<li>
+<p><strong>Air Quality Sensor Housing</strong></p>
 <table>
 <thead>
 <tr>
 <th>Parts</th>
-<th>Process</th>
-<th>Complete</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="uv parts" src="../../build_img/uv_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="uv process" src="../../build_img/uv_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="uv complete" src="../../build_img/uv_complete.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td>AQ Sensor wired with 200mm qwiic wire</td>
+<td>AQ Base</td>
+<td>AQ vented cap</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li><strong>AQ (Air Quality) :</strong><ul>
-<li>Contains the PMSA003I.</li>
-<li>Made of three component, a base (sensor is placed there), a vented lid fastened to the base,
-   and an impermeable cap (for sensor protection)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unplug the air quality sensor from the Qwiic connector, but leave the cord connected to the sensor.</td>
+<td><img alt="AQ Sensor Wired" src="../../assembly_imgs/Air_quality_sensor_wired.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Find the fan on the sensor (looks like a small black box). Feed the air quality wiring through the vented base and make sure the fan is facing towards the bottom of the housing (Look for the gap/lip at the bottom of the vented lid).</td>
+<td><img alt="AQ Orientation" src="../../assembly_imgs/AQ_orientation.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Twist on the vented lid. You should be able to see the fan at the bottom of the housing. NOTE: It may be a little difficult to twist on the vented lid. You may need to snap it into place.</td>
+<td><img alt="Finished Air Quality Housing" src="../../assembly_imgs/AQ_housing.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
-</ol>
+<li>
+<p><strong>Temperature, Humidity, and Air Pressure (BME680) Housing</strong></p>
 <table>
 <thead>
 <tr>
 <th>Parts</th>
-<th>Process</th>
-<th>Complete</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="aq parts" src="../../build_img/aq_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="aq process" src="../../build_img/aq_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="aq built" src="../../build_img/aq_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td>BME680 wired with 100mm qwiic wire</td>
+<td>Radiation Shield</td>
+<td>Vented Cap</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li><strong>Hydreon RG15 Rain Sensor:</strong><ul>
-<li>Separate it from its base by removing the four Phillips head screws.</li>
-<li>Connect it to the microcontroller using GPIO to Grove wire-set with the following connections:</li>
-<li>Red: 5V</li>
-<li>Black: Ground</li>
-<li>Yellow: Input</li>
-<li>White: Output</li>
-<li>Attach the threaded, printed, base that you printed.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unplug the BME680 sensor from the Qwiic connector, but leave the cord connected to the sensor.</td>
+<td><img alt="BME680 Sensor Wired" src="../../assembly_imgs/BME_680_wired.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Screw the vented cap onto the bottom of the radiation shield.</td>
+<td><img alt="Vented Cap of Radiation Shield" src="../../assembly_imgs/Radiation_shield_close_up.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Gently place the temperature, humidity, and air pressure sensor (BME 680) into the radiation shield with the wires sticking out from the top opening.</td>
+<td><img alt="radiation built" src="../../assembly_imgs/BME_680_in_radiation_shield.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
-</ol>
+<li>
+<p><strong>UV Sensor Housing</strong></p>
 <table>
 <thead>
 <tr>
 <th>Parts</th>
-<th>Deconstructed</th>
-<th>Wiring</th>
-<th>Details</th>
-<th>Complete</th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img alt="rg parts" src="../../build_img/rg_parts.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="rg deconstructed" src="../../build_img/rg_deconstructed.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="rg_wiring" src="../../build_img/rg_wiring.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="rg wiring detail" src="../../build_img/rg_wiring_detail.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="rg complete" src="../../build_img/rg_built.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
+<td>UV sensor wired with 500mm qwiic wire<br>UV cap<br>UV tube</td>
+<td>1" PVC T pipe<br>Short length of 1" PVC<br>Threaded to PVC adaptor</td>
+<td>Lens cover<br>Glue</td>
 </tr>
 </tbody>
 </table>
-<ol>
-<li>
-<p><strong>Qwiic Connection:</strong></p>
-<ul>
-<li>The RG15 monopolizes the Grove port, and the type of connection that port uses.</li>
-<li>To integrate Qwiic, attach a GPIO to qwiic jumper on ground, 5v, pin 21, and pin 25 of the microcontroller.</li>
-<li>Connect a four-way qwiic splitter to this qwiic setup.</li>
-</ul>
-</li>
-<li>
-<p><strong>Other Sensors:</strong></p>
-<ul>
-<li>Qwiic compatible, I2C, sensors can be daisy-chained or connected to another splitter if needed.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unplug the UV sensor from the Qwiic connection port, but leave it wired to the sensor.</td>
+<td><img alt="UV Sensor Wired" src="../../assembly_imgs/UV_sensor_wired.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Position the sensor in the UV cap so that the sensor-side is visible through the cap’s hole.</td>
+<td><img alt="UV Sensor in Housing Cap" src="../../assembly_imgs/UV_sensor_in_housing_cap.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Thread the sensor wires through the UV base and screw the base onto the UV cap.</td>
+<td><img alt="Adding base to UV sensor" src="../../assembly_imgs/UV_Sensor_in_housing.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>The sensor should feel very secure even when you tug on the wire. Double-check that the sensor-side of the UV sensor is visible from the top of the cap.</td>
+<td><img alt="UV sensor with base and cap" src="../../assembly_imgs/UV_Sensor_housing_screwed_on.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Thread the UV sensor wire through the top of the PVC joint and out the side side. Then, fit the UV base and cap onto the top of the PVC joint.</td>
+<td><img alt="UV in PVC Joint" src="../../assembly_imgs/UV_sensor_in_90_degree_pipe_alt_method.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Attach the shortest PVC pipe to the PVC joint and thread the wire through.</td>
+<td><img alt="UV with PVC Attached" src="../../assembly_imgs/UV_sensor_in_90_degree_pipe_with_PVC.jpeg" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Attach the final UV sensor 3D printed piece, which is the threaded attachment piece, to the end of the short PVC pipe (find in Print/Key Accessories).</td>
+<td><img alt="UV full set up with adapter" src="../../assembly_imgs/UV_sensor_in_T_pipe_with_PVC_and_adapter.jpeg" style="display: block; margin: 0 auto; width: 300px;" /></td>
+</tr>
+<tr>
+<td>Remove any film covering the screen of the UV lens. Place the lens over the top of the UV sensor housing. If it does not stay in place, consider using hot glue or another adhesive to ensure it remains secured.</td>
+<td><img alt="UV Housing Fully Assembled" src="../../assembly_imgs/UV_housing_final.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ol>
-<p><strong>Assembly:</strong></p>
+<h2 id="final-assembly-for-base-unit">Final Assembly for Base Unit</h2>
+<p>Prior to starting the final assembly, ensure that the UV sensor, air quality sensor, rain gauge, and temperature, humidity, and air pressure sensor are all inside their respective housing and the microcontroller is properly wired. </p>
 <ol>
 <li>
-<p>Wire up the entire system and connect it to a power source and wireless signal.</p>
+<p><strong>Rain Gauge Attachment</strong></p>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thread the rain gauge wire through the upper opening of the orb housing (locate the labeled section of the orb housing and make sure it is facing the correct way) and fasten the rain gauge onto the orb housing by twisting it into the threading. Ensure the wires are sticking out from the bottom opeing of the orb.</td>
+<td><img alt="Rain Gauge Attatchment" src="../../assembly_imgs/RG_attachment.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Run diagnostics through CHORDS to ensure data is being received by clients.</p>
+<p><strong>Air Quality Sensor Attachment</strong></p>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Position the orb housing so that the “NCAR” label is visible to you. Thread the air quality sensor wires through the right-side opening and of the orb housing and out through the bottom.</td>
+<td><img alt="Air Quality Sensor Attatchment" src="../../assembly_imgs/AQ_attachment.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+</tr>
+<tr>
+<td>Now screw on the air quality sensor to secure it. Be sure the vent section is correctly aligned at the bottom.</td>
+<td><img alt="Air Quality Vent Orientation" src="../../assembly_imgs/AQ_vent.png" style="display: block; margin: 0 auto; width: 100px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Place each sensor in its respective housing and reattach all components.</p>
+<p><strong>UV Sensor Attachment</strong></p>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thread the UV sensor wire through the opposite side of the orb housing to the air quality sensor, guiding it out through the bottom orb opening.</td>
+<td><img alt="UV Sensor Wiring" src="../../assembly_imgs/UV_wiring.png" style="display: block; margin: 0 auto; width: 500px;" /></td>
+</tr>
+<tr>
+<td>Align the threads of the printed PVC adaptor piece and securely twist the in place. Now you should have your UV sensor sitting in a PVC T-pipe junction and connected to the main orb with another length of PVC. Ensure you have three wires coming out the bottom of the orb: the rain gauge wire, the air quality sensor wire, and the UV sensor wire.</td>
+<td><img alt="UV Sensor Attachment" src="../../assembly_imgs/UV_attachment.png" style="display: block; margin: 0 auto; width: 500px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Mount the sensor station at a height of 1.5-2 meters off the ground, in a representative area compared to the surrounding environment, and isolated from buildings for accurate measurements more suitable in use for climate models.</p>
+<p><strong>Power Cord Attachment</strong></p>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert the USB-C cord into the UV sensor's PVC pipe and through the bottom of the orb housing. Leave the USB side sticking out of the PVC pipe.</td>
+<td><img alt="Power Cord Wiring" src="../../assembly_imgs/power_wiring.png" style="display: block; margin: 0 auto; width: 250px;" /></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Connecting all the wiring</strong></p>
+<table>
+<thead>
+<tr>
+<th>Instructions</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find the rain gauge connector and connect it into the microcontroller (look for white with 4 prongs). Then, connect the USB-C power to the microcontroller right below it.</td>
+<td><img alt="Microcontroller Ports" src="../../assembly_imgs/close_up_of_microcontroller.jpeg" style="display: block; margin: 0 auto; width: 500px;" /></td>
+</tr>
+<tr>
+<td>Connect the remaining two wires (air quality sensor and UV sensor) to the Qwiic MultiPort. The side of the port does not matter as long as the connection is tight. Attach the last sensor (BME 680 for temperature, humidity, and air pressure) to the Qwiic connection and keep track of this sensor.</td>
+<td><img alt="Connect Wires" src="../../assembly_imgs/wire_attachment.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Push all the sensors into the orb housing, except for the BME 680 sensor. Leave the BME 680 sensor outside the orb housing temporarily.</td>
+<td><img alt="Insert Wiring into Orb" src="../../assembly_imgs/insert_wiring.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Secure the radiation shield by place the BME 680 sensor inside the shield and screwing the shield to the bottom of the orb housing.</td>
+<td><img alt="Attach Radiation Shield" src="../../assembly_imgs/BME680_attachment.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+<tr>
+<td>Once you have completed the base assembly, you can test the complete core unit. Take your power source and plug-in the USB cord. You should see multiple green lights from the air quality sensor, radiation shield, and the UV sensor. It may be helpful to dim the lights to see the green glows. You may also be able to see the orb glowing red.</td>
+<td><img alt="Test Final Assembly" src="../../assembly_imgs/final_light_check.png" style="display: block; margin: 0 auto; width: 200px;" /></td>
+</tr>
+</tbody>
+</table>
 </li>
 </ol>
-<h3 id="charging-assembly">Charging Assembly</h3>
-<table>
-<thead>
-<tr>
-<th>Parts</th>
-<th>Complete</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="power parts" src="../../build_img/charging_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="power built" src="../../build_img/charging.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-</tr>
-</tbody>
-</table>
-<h3 id="rain-gauge-and-air-quality-integration">Rain Gauge and Air Quality Integration</h3>
-<table>
-<thead>
-<tr>
-<th>Part 1</th>
-<th>Part 2</th>
-<th>Complete</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="part 1" src="../../build_img/rg_aq_process_0.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="part 2" src="../../build_img/rg_aq_process_1.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="complete" src="../../build_img/rg_aq_complete.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-</tr>
-</tbody>
-</table>
-<h3 id="integrating-rg15-and-aq-with-base">Integrating RG15 and AQ with Base</h3>
-<table>
-<thead>
-<tr>
-<th>Process</th>
-<th>Complete</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="process" src="../../build_img/orb_rg_aq_process.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="complete" src="../../build_img/orb_rg_aq.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-</tr>
-</tbody>
-</table>
-<h3 id="station-assembly">Station Assembly</h3>
-<table>
-<thead>
-<tr>
-<th>Without PVC</th>
-<th>Without Power</th>
-<th>Full Station</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="No PVC" src="../../build_img/station_no_pvc.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="No Power" src="../../build_img/station_no_power.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-<td><img alt="Full" src="../../build_img/full_station.jpg" style="display: block; margin: 0 auto; width: 250px;" /></td>
-</tr>
-</tbody>
-</table>
 
 
 
