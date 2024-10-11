@@ -14,7 +14,7 @@ While we didn't feel it made sense to share gcodes for the various printing oper
 
 |Name|Image|STL File|Notes|
 |---|---|---|---|
-|Orb Housing|![Orb Housing](./stl_pngs/Sphere_housing.png){: style="display: block; margin: 0 auto; width: 300px;"}|[Orb Housing STL File](./print_files/sphere_housing/Sphere_Housing.stl)|This is the base of the weather station, where the microcontroller and most wires will go.|
+|Orb Housing|![Orb Housing](./stl_pngs/Sphere_housing.png){: style="display: block; margin: 0 auto; width: 300px;"}|[Orb Housing STL File](./print_files/sphere_housing/sphere_housing.stl)|This is the base of the weather station, where the microcontroller and most wires will go. <br/><br/> You can also find the full suite of STL files which include 3.8" and 4.5" orbs here: [https://github.com/NCAR/openiotwx-stl/tree/main/housing](https://github.com/NCAR/openiotwx-stl/tree/main/housing). |
 
 ## Base Attachments
 
