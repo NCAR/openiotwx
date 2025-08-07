@@ -8,3 +8,5 @@ Properly situating a weather station in the field requires careful consideration
 ![Deployment Example 1](../deployment_images/deployment_1.png){style="display: block; margin: 0 auto; width: 400px;"}
 
 ![Deployment Example 2](../deployment_images/deployment2.jpg){style="display: block; margin: 0 auto; width: 400px;"}
+
+<!-- jfslhohshofsd -->
