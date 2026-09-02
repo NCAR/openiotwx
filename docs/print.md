@@ -27,6 +27,12 @@ While we didn't feel it made sense to share gcodes for the various printing oper
 |Air Quality Body|![AQ Housing](./stl_pngs/AQ_housing.png){: style="display: block; margin: 0 auto; width: 400px;"}|[Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Half_Vented.stl)|Be sure the gap on the rim of this part faces downward during assembly so water cannot get into the sensor.|
 |Air Quality Cap|![AQ lid lock](./stl_pngs/AQ_vent.png){: style="display: block; margin: 0 auto; width: 400px;"}|[Air quality lid lock STL File](./print_files/air_quality/AQ_Lid_Half_Vented.stl)| Be sure the vented openings face downwards during assembly so water cannot get into the sensor.|
 
+## In Progress
+
+|Name|Image|STL File|Notes|
+|---|---|---|---|
+|Globe Thermometer Housing|*(coming soon)*|*(coming soon)*|A dual-sphere 3D-printed housing for the globe temperature sensor, used to estimate Mean Radiant Temperature (MRT). See [Platform](./introduction/platform.md#globe-thermometer-and-mean-radiant-temperature-mrt) for the measurement this supports. STL file and image **TBD**.|
+
 ## Key Accessories
 |Name|Image|STL File|Notes|
 |---|---|---|---|

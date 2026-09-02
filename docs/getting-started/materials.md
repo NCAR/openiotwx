@@ -64,6 +64,22 @@ Only one roll of filament is required.
 |Sensors|adafruit pm2.5|$44.95|1|$44.95|[(adafruit)](https://www.adafruit.com/product/4632)|
 |Sensors|adafruit ltr390|$4.95|1|$4.95|[(mouser)](https://www.mouser.com/ProductDetail/Adafruit/4831?qs=pBJMDPsKWf1zkcVjRyCEJQ%3D%3D)|
 
+## Additional Sensors (Latest Development)
+
+These are newer, optional nodes not yet included in the base station kit above: an RS485
+anemometer for wind speed/direction, a soil moisture sensor, and the parts for a
+3D-printed globe thermometer used to estimate Mean Radiant Temperature (MRT). See the
+[Platform](../introduction/platform.md#wind-speed-and-direction) page for what each one
+measures. Pricing and purchase links are still being finalized — **TBD**.
+
+|Area|Component|Price Per Unit|Number of Units|Total Price|Source|
+|---|---|---|---|---|---|
+|Sensors|WS302 RS485 Anemometer (Wind Speed & Direction)|TBD|1|TBD|TBD|
+|Cables|RS485-to-UART/TTL converter|TBD|1|TBD|TBD|
+|Sensors|Soil Moisture Sensor|TBD|1|TBD|TBD|
+|Sensors|Adafruit BME680 (Globe Temperature)|TBD|1|TBD|TBD|
+|Printing|3D Printed Globe Thermometer Housing|TBD|1|TBD|TBD|
+
 ## Optional Materials
 
 A note on optional materials. If you are hosting in a sunny place and running your station with a relatively low
