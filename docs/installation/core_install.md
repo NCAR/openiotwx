@@ -8,7 +8,54 @@ openIotWx is designed to be used with the [m5Stack Atom Lite](https://m5stack.co
 ESP32-Pico based microcontroller, but it is possible to connect other microcontroller devices with a few modifications to the code. Technically _any_ ESP32 chip with enough memory would work.
 That being said, the M5 atom lite is quite cheap and easy to purchase, and we thus suggest that one.
 
-## IoTwx library installation
+## Web-Based Flash Wizard
+
+openIoTwx also provides a browser-based Flash Wizard: pick your microcontroller (ESP32 
+Atom Lite or Adafruit RP2040 Feather), configure your station, network, and sensor 
+parameters, and flash compatible firmware directly over USB — no Arduino IDE required.
+
+<iframe id="mesonet-flasher-frame" src="../../flash-wizard/index.html" title="openIoTwx Flash Wizard" width="100%" height="700" scrolling="no" style="border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; overflow:hidden; display:block;" allow="usb; serial"></iframe>
+
+<script>
+  (function () {
+    var frame = document.getElementById("mesonet-flasher-frame");
+    var observer = null;
+
+    function syncHeight() {
+      var doc = frame.contentDocument;
+      if (!doc) return;
+      var height = Math.max(doc.documentElement.scrollHeight, doc.body.scrollHeight);
+      frame.style.height = height + "px";
+    }
+
+    frame.addEventListener("load", function () {
+      syncHeight();
+      setTimeout(syncHeight, 300); // catch late image/font reflow
+
+      if (observer) observer.disconnect();
+      observer = new ResizeObserver(syncHeight);
+      observer.observe(frame.contentDocument.documentElement);
+    });
+  })();
+</script>
+
+[Open the Flash Wizard in a new tab ↗](../flash-wizard/index.html){: target="_blank" rel="noopener" }
+
+!!! tip "Browser requirements"
+
+    The Flash Wizard uses the Web Serial API, which is currently only available in 
+    Chrome, Edge, or another Chromium-based browser, with the microcontroller plugged 
+    directly into a USB port (not through a hub). If the embedded window above doesn't 
+    prompt you to select a serial port, use the "open in a new tab" link instead.
+
+## Alternative: Manual Flash via Arduino IDE
+
+The steps below build and flash the firmware by hand using the Arduino IDE. Use this 
+route if you're on a microcontroller the Flash Wizard doesn't support yet, or you're 
+modifying the firmware source yourself; otherwise the Web-Based Flash Wizard above is 
+the faster path.
+
+### IoTwx library installation
 
 Before compiling the microcode onto the Arduino, you will also need to
 install the IoTwx library which controls the
@@ -25,7 +72,7 @@ communications and initialization functions of the station.
     * [https://github.com/NCAR/esp32-atomlite-arduino-iotwx](https://github.com/NCAR/esp32-atomlite-arduino-iotwx)
 
 
-## Preparing Your System
+### Preparing Your System
 
 First, download Arduino 1.8 - this is an old release but in order to use the correct data format, SPIFFS, you must use Arduino 1.8. Download Arduino 1.8.19 following this [link](https://www.arduino.cc/en/Main/Software). If this is changed in Arduino IDE, IoTWX will adapt accordingly. 
 
@@ -58,6 +105,17 @@ From there, in the ‘manage libraries’ functionality of Arduino (under sketch
     * Sensirion Core [https://github.com/Sensirion/arduino-core](https://github.com/Sensirion/arduino-core)
     * M5 Ethernet [https://github.com/m5stack/M5-Ethernet](https://github.com/m5stack/M5-Ethernet)
     * The Custom IoTwx library
+    * RS485/Modbus library for the WS302 Anemometer (wind speed & direction) — link **TBD**
+    * Soil moisture sensor library — link **TBD**
+
+!!! note "Globe Thermometer"
+
+    The globe thermometer reuses the Adafruit BME680 library already listed above; it is
+    a second BME680 sensor (mounted inside the 3D-printed globe housing) read at its own
+    I2C address. Mean Radiant Temperature (MRT) is then calculated from the globe
+    temperature, air temperature, and wind speed — see
+    [Platform](../introduction/platform.md#globe-thermometer-and-mean-radiant-temperature-mrt)
+    for the formula.
 
 If ESP32 isn't appearing underneath the board manager, download it (see previous steps). 
 Once ESP32 is downloaded, select it within board manager toolbar setting.
@@ -76,13 +134,13 @@ Select:
 
 Leave the rest as default if that setting was not already the default mode
 
-## Cloning the file structure
+### Cloning the file structure
 
 Next, clone the [Github respository](https://github.com/NCAR/esp32-atomlite-arduino-base) into Arduino. 
 Alternatively, click this link and download the zip of the file structure. 
 There should be code, a data directory, and within the data directory, a config.json
 
-## Editing Configuration Files
+### Editing Configuration Files
 
 Your microcontroller must contain a user-customized configuration file to operate.  The file contains information about Network Connection (WiFi), MQTT (the way your station will send data) connections and some other relevant information.
 
@@ -93,7 +151,7 @@ In the folder that you will flash onto your mictrocontroller using the sketch da
 If the data folder isn't appearing, don't worry. Just create a data folder in the Arduino sketch folder. Inside of that, put the json and contents in and it should work.
 
 
-### Understanding the `config.json` file
+#### Understanding the `config.json` file
 
 A model config file looks something like this:
 
@@ -131,12 +189,12 @@ The details of each key are described below.
 | `iotwx_topic` | the MQTT topic your node will publish to.  It is not necessary for all nodes to publish to the same topic, but if you are using the CHORDS MQTT Orchestrator ([GitHub - NCAR/chords-mqtt-orchestrator](https://github.com/NCAR/chords-mqtt-orchestrator)), then you will need to adjust it accordingly to route your messages where they belong.  The current default is `"iotwx/net"`. |
 | `iotwx_max_frequency` | is the CPU frequency (in Mhz) you wish your node to run  on.  The m5Stack Atom Lite can be run from 40-240Mhz. Varying the value has power-saving benefits - up to 50% reduction in total power consumption. |
 
-## Flashing onto the microcontroller
+### Flashing onto the microcontroller
 
 Once you have everything set up within Arduino IDE, compile everything you just did. If that works with no errors, plug the microcontroller into your computer, and flash onto it.
 Additionally, make sure to do an ESP32 Sketch Data Upload (under Tools). This will upload your config.json. You don't need to reflash the whole microcontroller if you need to update the config, just redo this step.
 
-## Configuring data upload
+### Configuring data upload
 
 While this isn't necessarily under the direct purview of openIoTwx, and is more covered by whatever orchestrator and other clients you decide to use, it is worth noting that your topic in the config needs to then be matched and set up within your orchestrator and then in your data collection / visualization client (CHORDS for us).
 

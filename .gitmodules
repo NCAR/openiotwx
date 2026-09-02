@@ -1,0 +1,3 @@
+[submodule "docs/flash-wizard"]
+	path = docs/flash-wizard
+	url = https://github.com/pouyashaeri/mesonet-flasher.git

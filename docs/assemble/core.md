@@ -100,3 +100,44 @@ Prior to starting the final assembly, ensure that the UV sensor, air quality sen
      |Push all the sensors into the orb housing, except for the BME 680 sensor. Leave the BME 680 sensor outside the orb housing temporarily. |![Insert Wiring into Orb](../assembly_imgs/insert_wiring.png){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Secure the radiation shield by place the BME 680 sensor inside the shield and screwing the shield to the bottom of the orb housing.|![Attach Radiation Shield](../assembly_imgs/BME680_attachment.png){: style="display: block; margin: 0 auto; width: 200px;"}|
      |Once you have completed the base assembly, you can test the complete core unit. Take your power source and plug-in the USB cord. You should see multiple green lights from the air quality sensor, radiation shield, and the UV sensor. It may be helpful to dim the lights to see the green glows. You may also be able to see the orb glowing red. |![Test Final Assembly](../assembly_imgs/final_light_check.png){: style="display: block; margin: 0 auto; width: 200px;"}|
+
+## Additional Sensors (Optional, Latest Development)
+
+The following nodes are newer additions to the platform and are not required for the
+basic four-sensor station documented above. Step-by-step photos for these are still
+being put together — **TBD** — but the general integration follows the same pattern as
+the other sensors: wire the sensor, mount it in its housing, and route the cable back
+to the microcontroller.
+
+1. **WS302 RS485 Anemometer (Wind Speed & Direction)**
+
+     |Parts|||
+     | ------ |  ------ |   ------ |
+     |WS302 anemometer|RS485-to-UART/TTL converter|Mast/pole mount|
+
+     Mount the anemometer at the top of the station mast, above any obstructions, with
+     clear airflow on all sides. Wire the sensor's RS485 A/B lines to the RS485-to-UART
+     converter, then connect the converter to the microcontroller. Photos of this
+     assembly are **TBD**.
+
+2. **Soil Moisture Sensor**
+
+     |Parts|||
+     | ------ |  ------ |   ------ |
+     |Soil moisture sensor|Cable to microcontroller|—|
+
+     Insert the sensor probe into the soil at the desired monitoring depth and route
+     the cable back to the microcontroller. Photos of this assembly are **TBD**.
+
+3. **Globe Thermometer**
+
+     |Parts|||
+     | ------ |  ------ |   ------ |
+     |BME680 (globe) wired with qwiic cable|3D printed globe housing (see [Print](../print.md#in-progress))|—|
+
+     Place the temperature sensor inside the 3D-printed globe housing so it sits at the
+     center of the sphere, then mount the globe housing where it will get the same sun
+     exposure as the area being studied. The globe temperature, together with air
+     temperature and wind speed, is used to estimate Mean Radiant Temperature (MRT) —
+     see [Platform](../introduction/platform.md#globe-thermometer-and-mean-radiant-temperature-mrt)
+     for the formula. Photos of this assembly are **TBD**.
